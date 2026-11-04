@@ -1,0 +1,101 @@
+{
+    "title": "Enable-ProcessCreationEvent.ps1",
+    "links": {
+        "script": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fpowershell%2Fmodule%2Fpsdocs%2Ftoc.json%3Fview%3Dpowershell-7.5#page=4516&zoom=100,36,36",
+        "netframeworkAPI": "https://learn.microsoft.com/en-us/dotnet/api/?view=netframework-4.8.1"
+    },
+    "script": {
+        "line1": "$Query = New-Object System.Management.WqlEventQuery \"__InstanceCreationEvent\", (New-Object TimeSpan 0,0,1), \"TargetInstance isa 'Win32_Process'\"",
+        "part1a": "New-Object",
+        "part1b": "System.Management.WqlEventQuery",
+        "part1c": "__InstanceCreationEvent",
+        "part1d": "",
+        "part1e": ""
+    },
+    "new-object": {
+        "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fpowershell%2Fmodule%2Fpsdocs%2Ftoc.json%3Fview%3Dpowershell-7.5#page=4526&zoom=100,36,36",
+        "description": "Creates an instance of a Microsoft .NET Framework or COM object",
+        "syntax-net": {
+            "syntax": "New-Object [-TypeName]<String> [[-ArgumentList] <Object[]>][-Property <IDictionary>][<CommonParameters>]",
+            "-ArgumentList": {
+                "alias": "args",
+                "description": "Array of arguments passed to the constructor of the .NET Framework class.",
+                "requirement": "Constructors that take a single array parameter must be wrapped inside another array.",
+                "example": "$cert = New-Object System.Security.Cryptography.X509Certificates.X509Certificate -ArgumentList (,$bytes)",
+                "error": "New-Object: Exception calling \".ctor\" with \"1\" argument(s): \"Value cannot be null. (Parameter 'cert')\"",
+                "recommended": {
+                    "name": "Splatting",
+                    "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fpowershell%2Fmodule%2Fpsdocs%2Ftoc.json%3Fview%3Dpowershell-7.5#page=1391&zoom=100,36,36"
+                }
+            },
+            "-Property": {
+                "description": "Sets property values and invokes methods of the new object.",
+                "instruction": "Enter a hash table (keys, values) are (property_name/methods, property_values/method_arguments).",
+                "result": "A new object is created",
+                "factor1": "property_values are set",
+                "factor2": "methods are invoked in the hash tables order",
+        
+                "PSObject": {
+                    "condition1": "a new object is derived from the PSObject class",
+                    "condition2": "a property is specified that does not exist on the object",
+                    "conditional result": "New-Object adds the specified property to the object as a NoteProperty",
+                    "non-conditional result": "If not a PSObject, the command generates a non-terminating error."
+                }
+            }
+        },
+        "syntax-com": {
+            "syntax": "New-Object [-ComObject]<String> [-Strict][-Property <IDictionary>][<CommonParameters>]"
+        },
+        "": ""
+    },
+    "System.Management.WqlEventQuery": {
+        "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fdotnet%2Fapi%2F_splitted%2Fsystem.management%2Ftoc.json%3Fview%3Dnet-10.0-pp#page=878&zoom=100,36,36",
+        "source": "https://raw.githubusercontent.com/dotnet/dotnet/b0f34d51fccc69fd334253924abd8d6853fad7aa/src/runtime/src/libraries/System.Management/src/System/Management/ManagementQuery.cs",
+        "inheritance": "Object → ManagementQuery → EventQuery → WqlEventQuery",
+        "description": "Represents a WMI event query in WQL format",
+        "derived": {
+            "name": "EventQuery class",
+            "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fdotnet%2Fapi%2F_splitted%2Fsystem.management%2Ftoc.json%3Fview%3Dnet-10.0-pp#page=99&zoom=100,37,37"
+            
+
+
+
+        }
+    },
+    "Parameters": {
+        "link": "https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_parameters?view=powershell-7.5",
+        "description1": "commands rely on parameters for options/input.",
+        "syntax1": "-<parameter_name> <parameter_value>",
+        "syntax2": "-<parameter_name>:<parameter_value>",
+
+        "description2": "A hyphen signals powershell what follows is a parameter.",
+        "description3": "Parameter names & values are seperated with a space/colon.",
+        
+        "activity": {
+            "instructions": "use the following help commands to learn about parameters.",
+                "help1": "Get-Help Get-Member *",
+                "help2": "Get-Help Get-Member -Parameter *",
+                "help3": "Get-Help $HOME\\script.ps1",
+            "Positional parameters": "require the given position.",
+            "Named positional parameters": "may be put in any position.",
+            "example1": "help get-childitem -parameter exclude, path",
+
+            "Parameter type": "The Microsoft .NET Framework type is specified after the parameter name",
+            "Multi-parameter": "parameter types with an index specifier indicates multiple inputs.",
+            "example2": "help get-process -parameter name",
+
+            "accepts pipeline by value": "value can match Parameter type or be converted.",
+            "accepts pipeline by property name": "value must be same Parameter type as property",
+            "accepts wildcard characters": "parameter's value can contain wildcard characters",
+            "example3a": "get-childitem | get-location",
+            "example3b": "",
+
+            "delay-bind script blocks": {
+                "description": "Parameters accepting pipeline input use delay-bind script blocks on the parameter.",
+                "link": "https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_script_blocks?view=powershell-7.5"
+            }
+        },
+        
+        "link2": "https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_parameters_default_values?view=powershell-7.5"
+    }
+}

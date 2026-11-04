@@ -1,0 +1,27 @@
+{
+    "MSDN": {
+        "links": {
+            "MSDN Microsoft developer network": "https://en.wikipedia.org/wiki/Microsoft_Developer_Network#MSDN_Magazine",
+            "MSJ Microsoft Systems Journal": {
+                "main": "https://en.wikipedia.org/wiki/MSJ",
+                "HWIND": "https://ia801506.us.archive.org/31/items/msj-1986-10/MSJ-1986-10.pdf#page=15"
+            },
+            "C++ Graphics Editor": "https://learn.microsoft.com/en-us/previous-versions/visualstudio/visual-studio-6.0/aa293259(v=vs.60)",
+            "C++ Mozilla Developer": {
+                "main": "https://www.google.com/search?q=site%3Adeveloper.mozilla.org%2F+%22C%2B%2B%22&rlz=1C1GCEA_enUS1192US1192&oq=site%3Adeveloper.mozilla.org%2F+%22C%2B%2B%22&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQRRg60gEJMTUwMzlqMGo0qAIAsAIB&sourceid=chrome&ie=UTF-8",
+                "links": {
+                    "Compile C++ to WebAssembly": "https://developer.mozilla.org/en-US/docs/WebAssembly/Guides/C_to_Wasm"                }
+            }
+
+        }
+    },
+    "Microsoft HTML Help": {
+        "links": {
+            "Downloads": "https://learn.microsoft.com/en-us/previous-versions/windows/desktop/htmlhelp/microsoft-html-help-downloads",
+            "Help Project": "https://learn.microsoft.com/en-us/previous-versions/windows/desktop/htmlhelp/create-a-help-project",
+            "CHM-to-Namespace Map File": "https://learn.microsoft.com/en-us/previous-versions/visualstudio/visual-studio-2008/bb164547(v=vs.90)",
+            "Automatically Building Your .chm File": "https://learn.microsoft.com/en-us/previous-versions/visualstudio/visual-studio-6.0/aa733976(v=vs.60)",
+            "Decompiling a Help File": "https://learn.microsoft.com/en-us/previous-versions/windows/desktop/htmlhelp/decompiling-a-help-file"
+        }
+    }
+}

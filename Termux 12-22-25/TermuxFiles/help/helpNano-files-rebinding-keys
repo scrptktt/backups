@@ -1,0 +1,92 @@
+Prev: Syntax Highlighting,  Up: Nanorc Files
+8.3 Rebinding Keys
+==================
+Key bindings can be changed via the following three commands in a nanorc
+file:
+
+[in the context of ‘menu’]
+‘bind key function menu’	Rebind ‘key’ to ‘function’
+				(all menus where the function exists when ‘all’ is used)
+‘bind key "string" menu’
+     Makes ‘key’ produce ‘string’ in the context of ‘menu’ (or in all
+     menus where the key exists when ‘all’ is used).  Besides literal
+     text and/or control codes, the ‘string’ may contain function names
+     between braces.  These functions are invoked when the key is typed.
+     To include a literal opening brace, use ‘{{}’.
+‘unbind key menu’
+     Unbinds ‘key’ from ‘menu’ (or from all menus where the key exists
+     when ‘all’ is used).
+
+
+Note that
+	‘bind key "{function}" menu’ 
+	is equivalent to 
+	‘bind key function menu’, 
+
+except that for the latter form 
+‘nano’ checks the availability of the ‘function’ 
+in the given ‘menu’ at startup time 
+(and reports an error if it does not exist there), 
+
+whereas for the first form ‘nano’ checks at execution time 
+that the ‘function’ exists but not whether it makes any sense in the current menu.
+
+The user has to take care that a function name between braces (or any sequence of them) is
+appropriate.  
+Strange behavior or even a crash can result when the braced name is unfitting.
+
+
+   The format of ‘key’ should be one of:
+
+     ‘^X’
+          where X is a Latin letter, or one of several ASCII characters
+          (@, ], \, ^, _), or the word "Space".  Example: ‘^C’.
+
+     ‘M-X’
+          where X is any ASCII character except [, or the word "Space".
+          Example: ‘M-8’.
+
+     ‘Sh-M-X’
+          where X is a Latin letter.  Example: ‘Sh-M-U’.  By default,
+          each Meta+letter keystroke does the same as the corresponding
+          Shift+Meta+letter.  But when any Shift+Meta bind is made, that
+          will no longer be the case, for all letters.
+
+     ‘FN’
+          where N is a numeric value from 1 to 24.  Example: ‘F10’.
+          (Often, ‘F13’ to ‘F24’ can be typed as ‘F1’ to ‘F12’ with
+          Shift.)
+
+     ‘Ins’ or ‘Del’
+
+
+   Rebinding ‘^M’ (Enter) or ‘^I’ (Tab) is probably not a good idea.
+Rebinding ‘^[’ (Esc) is not possible, because its keycode is the starter
+byte of Meta keystrokes and escape sequences.  Rebinding any of the
+dedicated cursor-moving keys (the arrows, Home, End, PageUp and
+PageDown) is not possible.  On some terminals it’s not possible to
+rebind ‘^H’ (unless ‘--raw’ is used) because its keycode is identical to
+that of the Backspace key.
+
+
+   Valid names for the ‘function’ to be bound are:
+
+‘help’
+     Invokes the help viewer.
+
+‘cancel’
+     Cancels the current command.
+
+‘exit’
+     Exits from the program (or from the help viewer or file browser).
+
+‘writeout’
+     Writes the current buffer to disk, asking for a name.
+
+‘savefile’
+     Writes the current file to disk without prompting.
+
+‘insert’
+     Inserts a file into the current buffer (at the current cursor
+     position), or into a new buffer when option ‘multibuffer’ is set.
+

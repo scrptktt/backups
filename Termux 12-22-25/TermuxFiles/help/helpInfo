@@ -1,0 +1,244 @@
+Basic Info command keys
+
+h           Invoke the Info tutorial.
+PgUp        Scroll backward one screenful.
+PgDn        Scroll forward one screenful.
+]           Go to the next node in the document.
+n           Go to the next node on this level.
+[           Go to the previous node in the document.
+p           Go to the previous node on this level.
+
+i           Search for a specified string in the index, and
+              select the node referenced by the first entry found.
+/           Search forward for a specified string.
+{           Search for previous occurrence.
+}           Search for next occurrence.
+I           Synthesize menu of matching index entries.
+
+C-g         Cancel the current operation.
+H           Close this help window.
+q           Quit Info altogether.
+---_----_-----------------_-----------_---------------
+Home        Go to the beginning of this node.
+End         Go to the end of this node.
+Up          Move up one line.
+Down        Move down one line.
+
+TAB         Skip to the next hypertext link.
+RET         Follow the hypertext link under the cursor.
+l           Go back to the last node seen in this window.
+
+d           Go to the main 'directory' node.
+t           Go to the top node of this document.
+u           Go up one level.
+
+1...9       Pick the first...ninth item in this node's menu.
+0           Pick the last item in this node's menu.
+m           Pick a menu item specified by name.
+f           Follow a cross reference specified by name.
+g           Go to a node specified by name.
+
+---------------------
+This is GNU Info version 7.2.  The current search path is:
+/data/data/com.termux/files/usr/share/info:.
+---------------------
+
+Commands available in Info windows:
+C-l     (redraw-display)                Redraw the display
+C-u     (universal-argument)		Start (or multiply by 4) the current numeric argument
+
+M-x     (execute-command)		Read a command name in the echo area and execute it
+ESC x   (execute-command)		Read a command name in the echo area and execute it
+ESC C-f (show-footnotes)		Show the footnotes associated with this node in another window
+M-C-f   (show-footnotes)		Show the footnotes associated with this node in another window
+C-x w   (toggle-wrap)			Toggle the state of line wrapping in the current window
+
+C-x C-f (view-file)                     Read the name of a file and select it
+C-x C-v (view-file)                     Read the name of a file and select it
+C-x f   (all-files)                     Show all matching files
+
+
+M-/     (tree-search)                   Search this node and subnodes for a string
+M-{     (tree-search-previous)          Go to previous match in Info sub-tree
+M-}     (tree-search-next)              Go to next match in Info sub-tree
+/       (search)                        Read a string and search for it
+}       (search-next)                   Repeat last search in the same direction
+{       (search-previous)               Repeat last search in the reverse direction
+,       (next-index-match)		Go to the next matching index item from the last 'i' command
+?       (search-backward)               Read a string and search backward for it
+C-r     (isearch-backward)              Search interactively for a string as you type it
+C-s     (isearch-forward)               Search interactively for a string as you type it
+C-x N   (search-previous)               Repeat last search in the reverse direction
+C-x n   (search-next)                   Repeat last search in the same direction
+ESC TAB (move-to-prev-xref)             Move to the previous cross reference
+TAB     (move-to-next-xref)             Move to the next cross reference
+s       (search)                        Read a string and search for it
+i       (index-search)                  Look up a string in the index for this file
+r       (xref-item)			Read a footnote or cross reference and select its node
+f       (xref-item)			Read a footnote or cross reference and select its node
+S       (search-case-sensitively)       Read a string and search for it case-sensitively
+R       (toggle-regexp)			Toggle the usage of regular expressions in searches
+BackTab (move-to-prev-xref)             Move to the previous cross reference
+M-TAB   (move-to-prev-xref)             Move to the previous cross reference
+M-r     (move-to-window-line)           Move the cursor to a specific line of the window
+M-C-v   (scroll-other-window)           Scroll the other window
+ESC /   (tree-search)                   Search this node and subnodes for a string
+ESC {   (tree-search-previous)          Go to previous match in Info sub-tree
+ESC }   (tree-search-next)              Go to next match in Info sub-tree
+
+
+
+M--     (add-digit-to-numeric-arg)      Add this digit to the current numeric argument
+ESC -   (add-digit-to-numeric-arg)      Add this digit to the current numeric argument
+M-0 .. M-9(add-digit-to-numeric-arg)    Add this digit to the current numeric argument
+ESC 0 .. ESC 9(add-digit-to-numeric-arg)Add this digit to the current numeric argument
+
+LFD     (select-reference-this-line)	Select reference or menu item appearing on this line
+RET     (select-reference-this-line)	Select reference or menu item appearing on this line
+ESC Up  (prev-line)                     Move up to the previous line
+ESC Down(next-line)                     Move down to the next line
+ESC Right(forward-word)                 Move forward a word
+ESC Left(backward-word)                 Move backward a word
+ESC b   (backward-word)                 Move backward a word
+ESC f   (forward-word)                  Move forward a word
+ESC v   (scroll-backward-page-only)	Scroll backward in this window staying within node
+C-a     (beginning-of-line)             Move to the start of the line
+C-b     (backward-char)                 Move backward a character
+C-e     (end-of-line)                   Move to the end of the line
+C-f     (forward-char)                  Move forward a character
+C-h     (scroll-backward)               Scroll backward in this window
+C-n     (next-line)                     Move down to the next line
+C-p     (prev-line)                     Move up to the previous line
+C-v     (scroll-forward-page-only)      Scroll forward in this window staying within node
+
+H       (get-help-window)               Display help message
+x       (delete-window)                 Delete the current window
+C-x ^   (grow-window)                   Grow (or shrink) this window
+C-x t   (tile-windows)			Divide the available screen space among the visible windows
+C-x o   (next-window)                   Select the next window
+C-x 2   (split-window)                  Split the current window
+C-x 1   (keep-one-window)               Delete all other windows
+C-x 0   (delete-window)                 Delete the current window
+ESC r   (move-to-window-line)           Move the cursor to a specific line of the window
+ESC C-v (scroll-other-window)           Scroll the other window
+
+ESC <   (beginning-of-node)             Move to the start of this node
+C-x C-b (list-visited-nodes)		Make a window containing a menu of all of the currently visited nodes
+C-x b   (select-visited-node)		Select a node which has been previously visited in a visible window
+ESC >   (end-of-node)                   Move to the end of this node
+
+
+
+
+ESC PgUp(scroll-other-window-backward)  Scroll the other window backward
+ESC PgDn(scroll-other-window)           Scroll the other window
+SPC     (scroll-forward)                Scroll forward in this window
+
+
+m       (menu-item)                     Read a menu item and select its node
+G       (menu-sequence)			Read a list of menus starting from dir and follow them
+1 .. 9  (menu-digit)                    Select this menu item
+0       (last-menu-item)                Select the last item in this node's menu
+
+
+
+
+I       (virtual-index)                 List all matches of a string in the index
+
+h       (get-info-help-node)            Visit Info node '(info)Help'
+=       (display-file-info)             Show full file name of node being displayed
+
+d       (dir-node)                      Select the node '(dir)'
+t       (top-node)                      Select the node 'Top' in this file
+u       (up-node)                       Select the Up node
+
+[       (global-prev-node)              Move backwards or up through node structure
+]       (global-next-node)              Move forwards or down through node structure
+n       (next-node)                     Select the Next node
+p       (prev-node)                     Select the Prev node
+
+b       (beginning-of-node)             Move to the start of this node
+e       (end-of-node)                   Move to the end of this node
+
+Home    (beginning-of-node)             Move to the start of this node
+M-<     (beginning-of-node)             Move to the start of this node
+<       (first-node)                    Select the first node in this file
+>       (last-node)                     Select the last node in this file
+M->     (end-of-node)                   Move to the end of this node
+End     (end-of-node)                   Move to the end of this node
+
+l       (history-node)                  Select the most recently selected node
+
+g       (goto-node)                     Read a node name and select it
+O       (goto-invocation-node)          Find the node describing program invocation
+
+
+
+PgUp    (scroll-backward)               Scroll backward in this window
+DEL     (scroll-backward)               Scroll backward in this window
+M-v     (scroll-backward-page-only)	Scroll backward in this window staying within node
+PgDn    (scroll-forward)                Scroll forward in this window
+
+Right   (forward-char)                  Move forward a character
+Left    (backward-char)                 Move backward a character
+M-b     (backward-word)                 Move backward a word
+M-b     (backward-word)                 Move backward a word
+M-f     (forward-word)                  Move forward a word
+Up      (prev-line)                     Move up to the previous line
+Down    (next-line)                     Move down to the next line
+
+
+C-g     (abort-key)                     Cancel current operation
+M-C-g   (abort-key)                     Cancel current operation
+ESC C-g (abort-key)                     Cancel current operation
+C-x C-g (abort-key)                     Cancel current operation
+C-x C-c (quit)                          Quit using Info
+q       (quit)                          Quit using Info
+
+---------------------
+
+Commands available in the echo area:
+
+C-a     (echo-area-beg-of-line)         Move to the start of this line
+C-b     (echo-area-backward)            Move backward a character
+C-d     (echo-area-delete)              Delete the character under the cursor
+C-e     (echo-area-end-of-line)         Move to the end of this line
+C-f     (echo-area-forward)             Move forward a character
+C-g     (echo-area-abort)               Cancel or quit operation
+C-h     (echo-area-rubout)              Delete the character behind the cursor
+TAB     (echo-area-complete)            Insert completion
+LFD     (echo-area-newline)             Accept (or force completion of) this line
+C-k     (echo-area-kill-line)           Kill to the end of the line
+C-l     (redraw-display)                Redraw the display
+RET     (echo-area-newline)             Accept (or force completion of) this line
+C-q     (echo-area-quoted-insert)       Insert next character verbatim
+C-t     (echo-area-transpose-chars)     Transpose characters at point
+C-u     (universal-argument)
+     Start (or multiply by 4) the current numeric argument
+C-x DEL (echo-area-backward-kill-line)  Kill to the beginning of the line
+C-y     (echo-area-yank)                Yank back the contents of the last kill
+ESC     (echo-area-abort)               Cancel or quit operation
+Right   (echo-area-forward)             Move forward a character
+Left    (echo-area-backward)            Move backward a character
+Home    (echo-area-beg-of-line)         Move to the start of this line
+End     (echo-area-end-of-line)         Move to the end of this line
+DEL     (echo-area-rubout)              Delete the character behind the cursor
+M-C-g   (echo-area-abort)               Cancel or quit operation
+M-TAB   (echo-area-tab-insert)          Insert a TAB character
+M-C-v   (echo-area-scroll-completions-window)Scroll the completions window
+M--     (add-digit-to-numeric-arg)      Add this digit to the current numeric argument
+M-0 .. M-9(add-digit-to-numeric-arg)    Add this digit to the current numeric argument
+M-?     (echo-area-possible-completions)List possible completions
+M-b     (echo-area-backward-word)       Move backward a word
+M-d     (echo-area-kill-word)           Kill the word following the cursor
+M-f     (echo-area-forward-word)        Move forward a word
+M-y     (echo-area-yank-pop)            Yank back a previous kill
+M-DEL   (echo-area-backward-kill-word)  Kill the word preceding the cursor
+---------------------
+
+The following commands can only be invoked via M-x:
+
+M-x scroll-forward-set-window	Scroll forward in this window and set default window size
+M-x scroll-backward-set-window	Scroll backward in this window and set default window size
+M-x scroll-forward-page-only-set-window	Scroll forward in this window staying within node and set default window size
+M-x scroll-backward-page-only-set-window

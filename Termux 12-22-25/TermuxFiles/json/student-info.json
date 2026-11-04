@@ -1,0 +1,425 @@
+{
+        "Curriculum & Courses": {
+                "https://eastcarolina.my.site.com/undergraduate/": "",    
+                "ECU Student Manual": "https://policy.ecu.edu/handbooks/",
+                "Forgiveness Policy": "https://advising.ecu.edu/readmission-forgiveness-policy/",
+                "NC-SARA": "https://nc-sara.org/",
+                "NC-SARA2": "https://saracompliance.ecu.edu/wp-content/pv-uploads/sites/96/Licensure-Disclosure3.pdf",
+                "NC-SARA3": "https://saracompliance.ecu.edu/professional-licensing-boards/",
+                "State Authorization network": "https://wcetsan.wiche.edu/",
+                "NCRDS": "https://ncresidency.cfnc.org/residency",
+                "Criminal Background": "https://www.northcarolina.edu/apps/policy/doc.php?type=pdf&id=838",
+                "Mugshot 2021": "https://www.floridatoday.com/picture-gallery/news/crime/2017/07/10/photos-arrest-mugshots-7-9-17/103570116/",
+                "Mugshot 2022": "https://www.northcarolina.edu/apps/policy/doc.php?type=pdf&id=838",
+                "General Information": {
+                        "Level": "Undergraduate",
+                        "Class": "Sophomore",
+                        "Status": "Active",
+                        "Student Type": "Readmit",
+                        "Residency": "In-State Resident",
+                        "Campus": "East Carolina University"
+                },
+                "CURRICULUM, HOURS & GPA": {
+                        "Primary": {
+                            "Degree": "Bachelor of Science",
+                                "Level": "Undergraduate",
+                                "Program": "BS-Software Engineering",
+                                "College": "Coll of Engineering and Tech",
+                                "Major": "Software Engineering",
+                                "Department": "Computer Science",
+                                "Concentration": "Data Science",
+                                "Minor": "Not Provided",
+                                "Concentration2#": "Not Provided",
+                                "Admit Type": "Readmit",
+                                "Admit Term": "Fall 2025",
+                                "Catalog Term": "Fall 2024"
+                        },
+                        "Secondary": {},
+                        "GPA and Hours": {
+                                "Overall Hours": 51,
+                                "Overall GPA": 2.533,
+                                "Institution": ["Undergraduate", 15, 2.533],
+                                "Transfer": ["Undergraduate", 36, 0.000],
+                                "Overall": ["Undergraduate", 51, 2.533]
+                        }
+                }
+        
+        },
+        "Prior Educaction & Testing": {
+                "Secondary Education": {
+                        "School Name": "First Flight High School",
+                        "Graduation Date": "06/01/2014",
+                        "Location": "Kill Devil Hills, NC",
+                        "GPA": "3.58"
+                },
+                "Post Secondary Education": {
+                        "School Name": "Santa Fe College - FL",
+                        "Attended Date": "08/15/2019 - 09/15/2023"
+                }
+        },
+        "Academic Transcript": {
+                "Student Information": {
+                        "Name": "Marcellus Q Murray",
+                        "Birth Date": "Dec 09, 1995",
+                        "Student Type": "Readmit"
+                },
+                "Curriculum Information": {
+                        "Current Program" : "Bachelor of Science",
+                        "College": "Coll of Engineering and Tech",
+                        "Major Concentration": "Data Science",
+                        "Major and Department": "Software Engineering, Computer Science"
+                },
+        "Transfer Credit Accepted by Institution": {
+                "TERMS": {
+                        "201980": {
+                                "Santa Fe College - FL": {
+                                        "ICTN": {
+                                                "Subject": "ICTN",
+                                                "Course": "1XXX",
+                                                "Title": "Intro to College Computing",
+                                                "Grade": "TA",
+                                                "Credit hours": "3.000",
+                                                "Quality points": "0.000",
+                                                "R": ""
+                                        },
+                                        "COAD": {
+                                                "Subject": "COAD",
+                                                "Course": "1XXX",
+                                                "Title": "College Success",
+                                                "Grade": "TA",
+                                                "Credit hours": "3.000",
+                                                "Quality points": "0.000",
+                                                "R": ""
+                                        },
+                                        "Current Term": {
+                                                "Attempt Hours": "6.000",
+                                                "Passed Hours": "6.000",
+                                                "Earned Hours": "6.000",
+                                                "GPA Hours": "0.000",
+                                                "Quality Points": "0.000",
+                                                "GPA": "0.000"
+                                        }
+                                }
+                        },
+                        "202030": {
+                                "Santa Fe College - FL": {
+                                        "ENGL": {
+                                                "Subject": "ENGL",
+                                                "Course": "1100",
+                                                "Title": "Composition",
+                                                "Grade": "TB",
+                                                "Credit hours": "3.000",
+                                                "Quality points": "0.000",
+                                                "R": ""
+                                        },
+                                        "Current Term": {
+                                                "Attempt Hours": "3.000",
+                                                "Passed Hours": "3.000",
+                                                "Earned Hours": "3.000",
+                                                "GPA Hours": "0.000",
+                                                "Quality Points": "0.000",
+                                                "GPA": "0.000"
+                                        }
+                                },
+                        "202180": {
+                                "Santa Fe College - FL": {
+                                        "ENGL": {
+                                                "Subject": "ENGL",
+                                                "Course": "2201",
+                                                "Title": "Writing about the Disciplines",
+                                                "Grade": "TB+",
+                                                "Credit hours": "3.000",
+                                                "Quality points": "0.000",
+                                                "R": ""
+                                        },
+                                        "MUSC": {
+                                                "Subject": "MUSC",
+                                                "Course": "1XXX",
+                                                "Title": "Music Fundamentals",
+                                                "Grade": "TB+",
+                                                "Credit hours": "3.000",
+                                                "Quality points": "0.000",
+                                                "R": ""
+                                        },
+                                        "PSYC": {
+                                                "Subject": "PSYC",
+                                                "Course": "1000",
+                                                "Title": "Introductory Psychology",
+                                                "Grade": "TC",
+                                                "Credit hours": "3.000",
+                                                "Quality points": "0.000",
+                                                "R": ""
+                                        },
+                                        "Current Term": {
+                                                "Attempt Hours": "9.000",
+                                                "Passed Hours": "9.000",
+                                                "Earned Hours": "9.000",
+                                                "GPA Hours": "0.000",
+                                                "Quality Points": "0.000",
+                                                "GPA": "0.000"
+                                        }
+                                }
+                        },
+                        "202230": {
+                                "Santa Fe College - FL": {
+                                        "CSCI 1XXX": {
+                                                "Subject": "CSCI",
+                                                "Course": "1XXX",
+                                                "Title": "Web Authoring I",
+                                                "Grade": "TB",
+                                                "Credit hours": "3.000",
+                                                "Quality points": "0.000",
+                                                "R": ""
+                                        },
+                                        "CSCI 2XXX": {
+                                                "Subject": "CSCI",
+                                                "Course": "2XXX",
+                                                "Title": "Intro to Programming",
+                                                "Grade": "TA",
+                                                "Credit hours": "3.000",
+                                                "Quality points": "0.000",
+                                                "R": ""
+                                        },
+                                        "ICTN 1XXX": {
+                                                "Subject": "ICTN",
+                                                "Course": "1XXX",
+                                                "Title": "Computer Concepts",
+                                                "Grade": "TA",
+                                                "Credit hours": "3.000",
+                                                "Quality points": "0.000",
+                                                "R": ""
+                                        },
+                                        "Current Term": {
+                                                "Attempt Hours": "9.000",
+                                                "Passed Hours": "9.000",
+                                                "Earned Hours": "9.000",
+                                                "GPA Hours": "0.000",
+                                                "Quality Points": "0.000",
+                                                "GPA": "0.000"
+                                        }
+                                },
+                        "202250": {
+                                "Santa Fe College - FL": {
+                                        "CSCI": {
+                                                "Subject": "CSCI",
+                                                "Course": "2XXX",
+                                                "Title": "Programming Logic",
+                                                "Grade": "TB",
+                                                "Credit hours": "3.000",
+                                                "Quality points": "0.000",
+                                                "R": ""
+                                        },
+                                        "Current Term": {
+                                                "Attempt Hours": "3.000",
+                                                "Passed Hours": "3.000",
+                                                "Earned Hours": "3.000",
+                                                "GPA Hours": "0.000",
+                                                "Quality Points": "0.000",
+                                                "GPA": "0.000"
+                                        }
+                                }
+                        },
+                        "202250": {
+                                "Santa Fe College - FL": {
+                                        "CSCI 1XXX": {
+                                                "Subject": "CSCI",
+                                                "Course": "1XXX",
+                                                "Title": "Web Authoring 2",
+                                                "Grade": "TC",
+                                                "Credit hours": "3.000",
+                                                "Quality points": "0.000",
+                                                "R": ""
+                                        },
+                                       "MATH 1065": {
+                                                "Subject": "MATH",
+                                                "Course": "1065",
+                                                "Title": "College Algebra",
+                                                "Grade": "TC+",
+                                                "Credit hours": "3.000",
+                                                "Quality points": "0.000",
+                                                "R": ""
+                                        },
+                                        "Current Term": {
+                                                "Attempt Hours": "6.000",
+                                                "Passed Hours": "6.000",
+                                                "Earned Hours": "6.000",
+                                                "GPA Hours": "0.000",
+                                                "Quality Points": "0.000",
+                                                "GPA": "0.000"
+                                        }
+                        }                        
+                }
+        },
+        "Institution Credit": {
+                "TERMS": {
+                        "Spring 2024": {
+                                "College": "Coll of Engineering and Tech",
+                                "Major": "Software Engineering",
+                                "Student Type": "New Transfer",
+                                "Academic Standing": "Good Standing",
+                                "MATH 2119": {
+                                        "Subject": "MATH",
+                                        "Course": "2119",
+                                        "Campus": "Main Campus",
+                                        "Level": "UG",
+                                        "Title": "Elements of Calculus",
+                                        "Grade": "B+",
+                                        "Credit hours": "3.000",
+                                        "Quality points": "9.900",
+                                        "Start and End Dates": "",
+                                        "R": "",
+                                        "CEU Contact Hours": ""
+                                },
+                                "PHIL 2119#": {
+                                        "Subject": "PHIL",
+                                        "Course": "2119",
+                                        "Campus": "Main Campus",
+                                        "Level": "UG",
+                                        "Title": "Business Ethics",
+                                        "Grade": "D+",
+                                        "Credit hours": "3.000",
+                                        "Quality points": "3.900",
+                                        "Start and End Dates": "",
+                                        "R": "",
+                                        "CEU Contact Hours": ""
+                                },
+                                "SENG 1000": {
+                                        "Subject": "SENG",
+                                        "Course": "1000",
+                                        "Campus": "Main Campus",
+                                        "Level": "UG",
+                                        "Title": "Software Engr Foundtns & Pract",
+                                        "Grade": "B+",
+                                        "Credit hours": "3.000",
+                                        "Quality points": "9.900",
+                                        "Start and End Dates": "",
+                                        "R": "",
+                                        "CEU Contact Hours": ""
+                                },
+                                "SENG 1010": {
+                                        "Subject": "SENG",
+                                        "Course": "1010",
+                                        "Campus": "Main Campus",
+                                        "Level": "UG",
+                                        "Title": "Discrete Struct Software Engr",
+                                        "Grade": "B+",
+                                        "Credit hours": "3.000",
+                                        "Quality points": "9.900",
+                                        "Start and End Dates": "",
+                                        "R": "",
+                                        "CEU Contact Hours": ""
+                                },
+                                "Term Totals (Undergraduate)": {
+                                        "Current Term": {
+                                                "Attempt Hours": "12.000",
+                                                "Passed Hours": "12.000",
+                                                "CEU Hours": "12.000",
+                                                "GPA Hours": "12.000",
+                                                "Quality Points": "33.600.000",
+                                                "GPA": "2.800"
+                                        },
+                                        "Cumulative": {
+                                                "Attempt Hours": "12.000",
+                                                "Passed Hours": "12.000",
+                                                "CEU Hours": "12.000",
+                                                "GPA Hours": "12.000",
+                                                "Quality Points": "33.600.000",
+                                                "GPA": "2.800"
+                                        }
+                                }
+                        },
+                        "Fall 2024": {
+                                "College": "Coll of Engineering and Tech",
+                                "Major": "Software Engineering",
+                                "Student Type": "Continuing",
+                                "Academic Standing": "Good Standing",
+                                "Term Comments": "Academic Progress Alert",
+                                "BIOL": {
+                                        "Subject": "BIOL",
+                                        "Course": "1100",
+                                        "Campus": "Main Campus",
+                                        "Level": "UG",
+                                        "Title": "Principles of Biology I",
+                                        "Grade": "W",
+                                        "Credit hours": "0.000",
+                                        "Quality points": "0.000",
+                                        "Start and End Dates": "",
+                                        "R": "",
+                                        "CEU Contact Hours": ""
+                                },
+                                "BIOL Lab": {
+                                        "Subject": "BIOL",
+                                        "Course": "1101",
+                                        "Campus": "Main Campus",
+                                        "Level": "UG",
+                                        "Title": "Principles of Biology Lab I",
+                                        "Grade": "W",
+                                        "Credit hours": "0.000",
+                                        "Quality points": "0.000",
+                                        "Start and End Dates": "",
+                                        "R": "",
+                                        "CEU Contact Hours": ""
+                                },
+                                "ITEC": {
+                                        "Subject": "SENG",
+                                        "Course": "3290",
+                                        "Campus": "Main Campus",
+                                        "Level": "UG",
+                                        "Title": "Technical Writing",
+                                        "Grade": "F",
+                                        "Credit hours": "3.000",
+                                        "Quality points": "0.000",
+                                        "Start and End Dates": "",
+                                        "R": "",
+                                        "CEU Contact Hours": ""
+                                },
+                                "SECS": {
+                                        "Subject": "SENG",
+                                        "Course": "1000",
+                                        "Campus": "Main Campus",
+                                        "Level": "UG",
+                                        "Title": "Intro to Security Studies",
+                                        "Grade": "W",
+                                        "Credit hours": "0.000",
+                                        "Quality points": "0.000",
+                                        "Start and End Dates": "",
+                                        "R": "",
+                                        "CEU Contact Hours": ""
+                                },
+                                "SENG": {
+                                        "Subject": "SENG",
+                                        "Course": "1020",
+                                        "Campus": "Main Campus",
+                                        "Level": "UG",
+                                        "Title": "Data Struct for Software Engr",
+                                        "Grade": "A",
+                                        "Credit hours": "3.000",
+                                        "Quality points": "12.000",
+                                        "Start and End Dates": "",
+                                        "R": "",
+                                        "CEU Contact Hours": ""
+                                },
+                                "Term Totals (Undergraduate)": {
+                                        "Current Term": {
+                                            "Attempt Hours": "13.000",
+                                            "Passed Hours": "3.000",
+                                            "CEU Hours": "3.000",
+                                            "GPA Hours": "3.000",
+                                            "Quality Points": "12.000",
+                                            "GPA": "2.000"
+                                        },
+                                        "Cumulative": {
+                                            "Attempt Hours": "25.000",
+                                            "Passed Hours": "15.000",
+                                            "CEU Hours": "15.000",
+                                            "GPA Hours": "18.000",
+                                            "Quality Points": "45.600",
+                                            "GPA": "2.533"
+                                        }
+                                }
+                        }
+                }
+        }
+}
+
+                        

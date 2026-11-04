@@ -1,0 +1,156 @@
+Next: Rebinding Keys,  Prev: Settings,  Up: Nanorc Files
+8.2 Syntax Highlighting
+=======================
+
+Coloring the different syntactic elements of a file is done via regular
+expressions (see the ‘color’ command below).  
+
+This is inherently imperfect, because regular expressions are not 
+powerful enough to fully parse a file.  
+
+Nevertheless, regular expressions can do a lot and are
+easy to make, so they are a good fit for a small editor like ‘nano’.
+See 
+	‘/usr/share/nano/’ and 
+	‘/usr/share/nano/extra/’ 
+	for the syntax-coloring definitions 
+	that are available out of the box.
+
+All regular expressions in ‘nano’ are POSIX extended regular
+expressions (ERE). 
+	This means that ‘.’, ‘?’, ‘*’, ‘+’, ‘^’, ‘$’, 
+	and several other characters are special.  
+		The period ‘.’ matches any single character,
+		‘?’ means the preceding item is optional,
+		‘*’ means the preceding item may be matched zero or more times, 
+		‘+’ means the preceding item must be matched one or more times, 
+		‘^’ matches the beginning of a line,
+		and ‘$’ the end, 
+		‘\<’ matches the start of a word,
+		and ‘\>’ the end, 
+		and ‘\s’ matches a blank.  
+It also means that lookahead and lookbehind are not possible.  
+A complete explanation can be found in the manual of GNU grep: 
+	‘info grep regular’.
+
+Each regular expression in a ‘nanorc’ file should be wrapped in
+double quotes (‘""’).  
+Multiple regular expressions can follow each other on a line by 
+separating them with blanks.  
+This means that a regular expression cannot contain a double quote 
+followed by a blank.
+When you need this combination inside a regular expression, 
+then either the double quote or the blank should be put between 
+square brackets (‘[]’).
+
+A separate syntax can be defined for each kind of file via the
+following commands in a nanorc file:
+
+‘syntax NAME ["FILEREGEX" ...]’
+	Start the definition of a syntax with this NAME.
+
+	All subsequent ‘color’ and other such commands are added to this syntax,
+	until a new ‘syntax’ command is encountered.
+
+	When ‘nano’ is run, 
+	this syntax is automatically activated (for the relevant buffer)
+	if the absolute filename matches the extended regular expression FILEREGEX.  
+	Or the syntax can be explicitly activated (for all buffers) by using the ‘-Y’
+	or ‘--syntax’  command-line option followed by the NAME.
+
+	The ‘default’ syntax is special: 
+	it takes no FILEREGEX, 
+	and applies to files that don’t match any syntax’s regexes.
+
+	The ‘none’ syntax is reserved; 
+	specifying it on the command line is the same as not having a syntax at all.
+
+‘header "REGEX" ...’
+	If from all defined syntaxes no FILEREGEX matched, 
+	then compare this REGEX (or regexes) against the first line of the current file,
+	to determine whether this syntax should be used for it.
+
+‘magic "REGEX" ...’
+	If no FILEREGEX matched and no ‘header’ regex matched either,
+	then compare this REGEX (or regexes) against the result of querying the
+	‘magic’ database about the current file, to determine whether this
+	syntax should be used for it.
+	(This querying is done only when ‘libmagic’ is actually installed 
+	on the system and ‘--magic’ or ‘set magic’ was given.)
+
+‘formatter PROGRAM [ARGUMENT ...]’
+     Run the given PROGRAM on the full contents of the current buffer.
+‘linter PROGRAM [ARGUMENT ...]’
+     Use the given PROGRAM to do a syntax check on the current buffer.
+
+‘comment "STRING"’
+     Use the given string for commenting and uncommenting lines.  If the
+     string contains a vertical bar or pipe character (|), this
+     designates bracket-style comments; for example, "/*|*/" for CSS
+     files.  The characters before the pipe are prepended to the line
+     and the characters after the pipe are appended at the end of the
+     line.  If no pipe character is present, the full string is
+     prepended; for example, "#" for Python files.  If empty double
+     quotes are specified, the comment/uncomment functions are disabled;
+     for example, "" for JSON. The default value is "#".
+
+‘tabgives "STRING"’
+     Make the <Tab> key produce the given STRING.  Useful for languages
+     like Python that want to see only spaces for indentation.  This
+     overrides the setting of the ‘tabstospaces’ option.
+
+
+‘color [bold,][italic,]FGCOLOR,BGCOLOR "REGEX" ...’
+     Paint all pieces of text that match the extended regular expression
+     "regex" with the given foreground and background colors, at least
+     one of which must be specified.  Valid color names are: ‘red’,
+     ‘green’, ‘blue’, ‘magenta’, ‘yellow’, ‘cyan’, ‘white’, and ‘black’.
+     Each of these eight names may be prefixed with the word ‘light’ to
+     get a brighter version of that color.  The word ‘grey’ or ‘gray’
+     may be used as a synonym for ‘lightblack’.  On a Linux console,
+     ‘light’ does not have any effect for a background color.
+
+     On terminal emulators that can do at least 256 colors, other valid
+     (but unprefixable) color names are: ‘pink’, ‘purple’, ‘mauve’,
+     ‘lagoon’, ‘mint’, ‘lime’, ‘peach’, ‘orange’, ‘latte’, ‘rosy’,
+     ‘beet’, ‘plum’, ‘sea’, ‘sky’, ‘slate’, ‘teal’, ‘sage’, ‘brown’,
+     ‘ocher’, ‘sand’, ‘tawny’, ‘brick’, ‘crimson’, and ‘normal’ — where
+     ‘normal’ means the default foreground or background color.  On such
+     emulators, the color may also be specified as a three-digit
+     hexadecimal number prefixed with ‘#’, with the digits representing
+     the amounts of red, green, and blue, respectively.  This tells
+     ‘nano’ to select from the available palette the color that
+     approximates the given values.
+
+     The color pair may be preceded by ‘bold’ and/or ‘italic’ (separated
+     by commas) to get a bold and/or slanting typeface, if your terminal
+     can do those.
+
+     All coloring commands are applied in the order in which they are
+     specified, which means that later commands can recolor stuff that
+     was colored earlier.
+‘icolor [bold,][italic,]FGCOLOR,BGCOLOR "REGEX" ...’
+     Same as above, except that the matching is case insensitive.
+
+‘color [bold,][italic,]FGCOLOR,BGCOLOR start="FROMRX" end="TORX"’
+     Paint all pieces of text whose start matches extended regular
+     expression FROMRX and whose end matches extended regular expression
+     TORX with the given foreground and background colors, at least one
+     of which must be specified.  This means that, after an initial
+     instance of FROMRX, all text until the first instance of TORX is
+     colored.  This allows syntax highlighting to span multiple lines.
+‘icolor [bold,][italic,]FGCOLOR,BGCOLOR start="FROMRX" end="TORX"’
+     Same as above, except that the matching is case insensitive.
+
+‘include "SYNTAXFILE"’
+     Read in self-contained color syntaxes from SYNTAXFILE.  Note that
+     such a syntax file may contain only the above commands, from
+     ‘syntax’ to ‘icolor’.
+
+‘extendsyntax NAME COMMAND ARGUMENT ...’
+     Extend the syntax previously defined as "NAME" with another
+     COMMAND.  This allows you to add a new ‘color’, ‘icolor’, ‘header’,
+     ‘magic’, ‘formatter’, ‘linter’, ‘comment’, or ‘tabgives’ command to
+     an already defined syntax — useful when you want to slightly
+     improve a syntax defined in one of the system-installed files
+     (which normally are not writable).

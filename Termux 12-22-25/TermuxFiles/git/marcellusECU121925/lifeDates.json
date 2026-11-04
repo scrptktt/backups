@@ -1,0 +1,35 @@
+{
+    "Key Biblical Celebrations": {
+        "The Seven Major Feasts (Leviticus 23)": {
+            "4/2 Firstfruits (Bikkurim)": "A harvest festival, (symbolizes resurrection)",
+            "4/12 Passover & Unleavened Bread": "Commemorating Israel's liberation from Egyptian slavery (Exodus 12).",
+            "5/23 Feast of Weeks (Shavuot/Pentecost)":  "The wheat harvest, also marking the giving of the Law and the coming of the Holy Spirit.",
+            "9/20-9/21 Day of Atonement (Yom Kippur)":  "A solemn day for national atonement and repentance.",
+            "9/22 Feast of Trumpets (Rosh Hashanah)":   "A time of blowing trumpets for remembrance and judgment.",
+            "9/25-10/2 Feast of Tabernacles (Sukkot)":  "Celebrating God's provision during wilderness wandering, with rejoicing.",
+            "10/2-10/3 Eighth Day (Shemini Atzeret)":   "A final concluding feast. "
+        },
+        "US Holidays": {
+            "1/1 New Years day": "Start of a new year.",
+            "1/3 Martin Luther King, Jr. day": "Honors civil rights leader for equality.",
+            "2/3 Presidents day": "Honors George Washington (birthday) & U.S. Presidents.",
+            "2/14 Valentines day": "Love, friendship.",
+            "4/5 Easter": "Christian celebration of resurrection (dates vary).",
+            "5/2 Mothers day": "Honors mothers.",
+            "5/17 St. Patricks day": "Irish heritage.",
+            "5/26 Memorial day": "Remembers fallen military service members.",
+            "6/3 Father's day": "Honors fathers.",
+            "6/19 Independence day": "Celebrates the emancipation of enslaved African Americans (Juneteenth).",
+            "7/4 Independence day": "Celebrates the Declaration of Independence.",
+            "9/1 Labor day": "Honors American workers and labor movement.",
+            "10/2 Columbus day": "Commemorates Columbus' arrival in the Americas.",
+            "10/31 Halloween": "Costumes, candy, fun. ",
+            "11/11 Veterans day": "Honors all U.S. military veterans.",
+            "11/4 Thanksgiving day": "Harvest festival, giving thanks.",
+            "12/25 Christmas day": "Celebrates the birth of Jesus Christ."
+        },
+        "all": {
+            
+        }
+    }
+}

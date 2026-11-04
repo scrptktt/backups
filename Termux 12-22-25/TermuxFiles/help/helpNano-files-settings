@@ -1,0 +1,309 @@
+Next: Syntax Highlighting,  Up: Nanorc Files
+8.1 Settings
+============
+The supported settings in a nanorc file are:
+
+‘set afterends’			Ctrl+Right/Ctrl+Delete stop at word endings.
+‘set allow_insecure_backup’	Force backup success.
+				(do not enable)
+				(no permission reset due to OS considerations)
+
+‘set atblanks’			Word wrapping occurs on whitespace.
+				(rather than just edge of the screen)
+‘set autoindent’		Automatically indent newly created lines.
+
+[LOG]
+‘set backup’			Backup previous version of file.
+				(enabled with ‘set backup’ or --backup or -B)
+‘set backupdir "DIRECTORY"’	Specify backup directory.
+
+[UI]
+‘set emptyline’			Do not use the line below the title bar
+‘set constantshow’		cursor position on the status bar.  
+				(Note that this overrides ‘quickblank’)
+‘set guidestripe NUMBER’	Draw a column ruler.
+				(stripe color can be changed with ‘set stripecolor’)
+‘set linenumbers’		Display line numbers.
+‘set minibar’			Replace the status bar with current buffers info.
+				The minibars left shows the name of the file.
+					(an asterisk is shown for a modified buffer)
+				The minibars right is about the cursor including:
+					'current line', 'column number', 'character code'
+					'file percentage', 'file status','file buffer',
+					'number of lines in buffer'
+					(‘set constantshow’ required for state flags)
+					(‘set stateflags’ required for state flags)
+					(the same flags as are shown by ‘set stateflags’)
+				For multiole buffers, lines in buffer is replaced
+				by the counter [i/n].
+					
+				line/column numbers and character-code use 
+				and can be toggled on and off with ‘M-C’.
+‘set keycolor [bold,][italic,]FGCOLOR,BGCOLOR’
+				shortcut key color combination 
+				(help lines at the bottom of the screen)
+				(foreground and background colors are:)
+				(‘red’, ‘green’, ‘blue’, ‘magenta’,)
+				(‘yellow’, ‘cyan’, ‘white’, ‘black’)
+				Each of these may be prefixed with ‘light’ 
+
+				terminal emulators with 256 colors support:
+				‘pink’, ‘purple’, ‘mauve’, ‘lagoon’, ‘mint’,
+				‘lime’, ‘peach’, ‘orange’, ‘latte’, ‘rosy’,
+				‘beet’, ‘plum’, ‘sea’, ‘sky’, ‘slate’, ‘teal’,
+				‘sage’, ‘brown’, ‘ocher’, ‘sand’, ‘tawny’,
+				‘brick’, ‘crimson’, and ‘normal’ 
+				(‘normal’ means default foreground/background)
+				3-digit hexadecimal colors are also supported.
+
+				FGCOLOR & BGCOLOR may be preceded by bold/italic 
+				(separated by commas) or be ignored completely.
+‘set scrollercolor FGCOLOR,BGCOLOR’
+				indicator alias "scrollbar" color combination.
+				(*Note set keycolor:: for valid color names)
+‘set selectedcolor [bold,][italic,]FGCOLOR,BGCOLOR’
+				Use this color combination for selected text.
+				(*Note set keycolor:: for valid color names)
+‘set spotlightcolor [bold,][italic,]FGCOLOR,BGCOLOR’
+				search match highlighting color combination.
+				(*Note set keycolor:: for valid color names)
+‘set statuscolor [bold,][italic,]FGCOLOR,BGCOLOR’
+				status bar color combination.
+				(*Note set keycolor:: for valid color names)
+‘set stripecolor [bold,][italic,]FGCOLOR,BGCOLOR’
+				vertical guiding stripe color combination.  
+				(*Note set keycolor:: for valid color names)
+‘set titlecolor [bold,][italic,]FGCOLOR,BGCOLOR’
+				title bar color combination.
+				(*Note set keycolor:: for valid color names)
+‘set promptcolor [bold,][italic,]FGCOLOR,BGCOLOR’
+				prompt bar color combination.  
+				(*Note set keycolor:: for valid color names.)
+‘set errorcolor [bold,][italic,]FGCOLOR,BGCOLOR’
+				Status bar error message color combination.
+				(the default is bold, white, red)
+				(*Note set keycolor:: for valid color names)
+‘set minicolor [bold,][italic,]FGCOLOR,BGCOLOR’
+				Use this color combination for the mini bar.  
+				(*Note set keycolor:: for valid color names)
+‘set functioncolor [bold,][italic,]FGCOLOR,BGCOLOR’
+				concise function descriptions 
+				(the two help lines at the bottom of the screen)
+				*Note set keycolor:: for valid color names
+‘set boldtext’			Use bold text rather than inverse colors
+				(title bar, status bar, prompt bar, mini bar)
+				(key combos, line numbers, and selected text)
+				(Overridden by setting the options titlecolor)
+				(statuscolor, promptcolor, minicolor, keycolor)
+				(numbercolor, and/or selectedcolor)
+
+[On Justification]
+‘set bookstyle’			paragraph beginnings are lines beginning with whitespace.
+					(unless auto-indenting is on)
+‘set brackets "CHARACTERS"’	Enclose justified text in CHARACTERS.
+					(Only closing punctuation (see ‘set punct’)
+					(The default value is ""')>]}".)
+‘set fill NUMBER’		set target screen wrap size to COL_NUM
+					(for justification/hardwrapping)
+					(If NUMBER <= 0 then screen wrap width) 
+					(then screen width minus column NUMBER)
+					allowing wrap point to vary on resize)
+					(The default value is -8)
+‘set matchbrackets CHARACTERS’	Specify the open/close brackets found 
+					that can be found by bracket searches.
+					(opening set must be before the closing set)
+					(the two sets must be in the same order)
+					(The default value is "(<[{)>]}")
+
+
+[Formatting]
+‘set breaklonglines’		Automatically hard-wrap the current line 
+				(when it becomes overlong.)
+
+[Functionallity]
+‘set saveonexit’		Save a changed buffer automatically on exit (^X); 
+‘set positionlog’		Save cursor/anchor positions between sessions.
+				(remembered for the past 200 files)
+‘set preserve’			Preserve the XOFF and XON sequences.
+				(stop(^S)/resume(^Q) output)
+‘set historylog’		log search/replacement strings and executed commands.
+				(previous 100 can be reused in later sessions)
+‘set cutfromcursor’		Use cut-from-cursor-to-end-of-line.
+				(default is cutting the whole line)
+‘set casesensitive’		Do case-sensitive searches by default.
+‘set magic’			use libmagic to determine filetype.
+‘set jumpyscrolling’		Scroll half-screen instead of per line.
+‘set mouse’			mouse clicks can be used to place the cursor.
+				(double click to set mark or execute shortcuts)
+‘set multibuffer’		When reading (^R), insert file into new buffer.
+‘set noconvert’			Don’t convert files from DOS/Mac format.
+‘set nohelp’			Don’t display the help lists at the bottom of the screen.
+‘set regexp’			Do regular-expression searches by default.  
+				(RE in ‘nano’ are the extended type (ERE))
+
+[untitled]
+‘set colonparsing’		
+     When a filename given on the command line ends in a colon plus
+     digits and this filename does not exist, then snip the colon plus
+     digits and understand the digits as a line number.  If the trimmed
+     filename does not exist either, then repeat the process and
+     understand the obtained two numbers as line and column number.  But
+     if the doubly trimmed filename does not exist either, then forget
+     the trimming and accept the original filename as is.  To disable
+     this colon parsing for some file, use ‘+1’ or similar before the
+     relevant filename.
+
+
+
+‘set indicator’
+     Display a "scrollbar" on the righthand side of the edit window.  It
+     shows the position of the viewport in the buffer and how much of
+     the buffer is covered by the viewport.
+
+‘set locking’
+     Enable vim-style lock-files for when editing files.
+
+
+
+
+
+
+
+‘set nonewlines’
+     Don’t automatically add a newline when a text does not end with
+     one.  (This can cause you to save non-POSIX text files.)
+
+‘set nowrap’
+     Deprecated option since it has become the default setting.  When
+     needed, use ‘unset breaklonglines’ instead.
+
+‘set numbercolor [bold,][italic,]FGCOLOR,BGCOLOR’
+     Use this color combination for line numbers.  *Note set keycolor::
+     for valid color names.
+
+‘set operatingdir "DIRECTORY"’
+     At startup, make ‘nano’ change to the given DIRECTORY, and allow
+     reading and writing files only in this directory and its
+     subdirectories.
+
+
+
+
+‘set punct "CHARACTERS"’
+     Set the characters treated as closing punctuation when justifying
+     paragraphs.  This may not include blank characters.  Only the
+     specified closing punctuation, optionally followed by closing
+     brackets (see ‘set brackets’), can end sentences.  The default
+     value is "!.?".
+
+‘set quickblank’
+     Make status-bar messages disappear after 1 keystroke instead of
+     after 20.  Note that option ‘constantshow’ overrides this.  When
+     option ‘minibar’ or ‘zero’ is in effect, ‘quickblank’ makes a
+     message disappear after 0.8 seconds instead of after the default
+     1.5 seconds.
+
+‘set quotestr "REGEX"’
+     Set the regular expression for matching the quoting part of a line.
+     The default value is "^([ \t]*([!#%:;>|}]|//))+".  (Note that ‘\t’
+     stands for a literal Tab character.)  This makes it possible to
+     rejustify blocks of quoted text when composing email, and to rewrap
+     blocks of line comments when writing source code.
+
+‘set rawsequences’
+     Interpret escape sequences directly, instead of asking ‘ncurses’ to
+     translate them.  (If you need this option to get some keys to work
+     properly, it means that the terminfo terminal description that is
+     used does not fully match the actual behavior of your terminal.
+     This can happen when you ssh into a BSD machine, for example.)
+     Using this option disables ‘nano’’s mouse support.
+
+‘set rebinddelete’
+     Interpret the ‘Delete’ and ‘Backspace’ keys differently so that
+     both work properly.  You should only use this option when on your
+     system either ‘Backspace’ acts like Delete or ‘Delete’ acts like
+     Backspace.
+
+
+
+‘set showcursor’
+     Put the cursor on the highlighted item in the file browser, and
+     show the cursor in the help viewer, to aid braille users and people
+     with poor vision.
+
+‘set smarthome’
+     Make the Home key smarter.  When Home is pressed anywhere but at
+     the very beginning of non-whitespace characters on a line, the
+     cursor jumps to that beginning (either forwards or backwards).  If
+     the cursor is already at that position, it jumps to the true
+     beginning of the line.
+
+‘set softwrap’
+     Display lines that exceed the screen’s width over multiple screen
+     lines.  (You can make this soft-wrapping occur at whitespace
+     instead of rudely at the screen’s edge, by using also ‘set
+     atblanks’.)
+
+‘set speller "PROGRAM [ARGUMENT ...]"’
+     Use the given program to do spell checking and correcting.  *Note
+     --speller:: for details.
+
+
+
+‘set stateflags’
+     Use the top-right corner of the screen for showing some state
+     flags: ‘I’ when auto-indenting, ‘M’ when the mark is on, ‘L’ when
+     hard-wrapping (breaking long lines), ‘R’ when recording a macro,
+     and ‘S’ when soft-wrapping.  When the buffer is modified, a star
+     (‘*’) is shown after the filename in the center of the title bar.
+
+
+
+
+
+
+
+‘set tabsize NUMBER’
+     Use a tab size of NUMBER columns.  The value of NUMBER must be
+     greater than 0.  The default value is 8.
+
+‘set tabstospaces’
+     Convert each typed tab to spaces — to the number of spaces that a
+     tab at that position would take up.  (Note: pasted tabs are not
+     converted.)
+
+
+‘set trimblanks’
+     Remove trailing whitespace from wrapped lines when automatic
+     hard-wrapping occurs or when text is justified.
+
+‘set unix’
+     Save a file by default in Unix format.  This overrides nano’s
+     default behavior of saving a file in the format that it had.  (This
+     option has no effect when you also use ‘set noconvert’.)
+
+‘set whitespace "CHARACTERS"’
+     Set the two characters used to indicate the presence of tabs and
+     spaces.  They must be single-column characters.  The default pair
+     for a UTF-8 locale is "»·", and for other locales ">.".
+
+‘set wordbounds’
+     Detect word boundaries differently by treating punctuation
+     characters as part of a word.
+
+‘set wordchars "CHARACTERS"’
+     Specify which other characters (besides the normal alphanumeric
+     ones) should be considered as parts of words.  When using this
+     option, you probably want to unset ‘wordbounds’.
+
+‘set zap’
+     Let an unmodified ‘Backspace’ or ‘Delete’ erase the marked region
+     (instead of a single character, and without affecting the
+     cutbuffer).
+
+‘set zero’			Hide all interface elements and use all 
+				terminal rows for displaying buffer contents.
+				(title bar, status bar, and help lines) 
+				(status bar appears with significant messages)
+				(‘M-Z’ toggles the title/status bar)
+				(‘M-X’ toggles the help lines.)

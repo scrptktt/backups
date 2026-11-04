@@ -1,0 +1,9 @@
+{
+    "hunt1": {
+        "name": "set-alias",
+        "1": "set-alias -name test-alias -value get-location -description \"test get-location\"",
+        "2": "test-alias | format-list *",
+        "3": "test-alias | sort-object *"
+
+    }
+}

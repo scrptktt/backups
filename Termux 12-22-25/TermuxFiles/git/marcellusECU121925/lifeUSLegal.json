@@ -1,0 +1,124 @@
+{
+"G.S. 147 (NC General Statutes)": {
+        "site-link": "https://www.ncleg.gov/Laws/GeneralStatuteSections/Chapter147",
+        "link": "https://www.ncleg.gov/enactedlegislation/statutes/pdf/bychapter/chapter_147.pdf#page=72&zoom=100,350,350",                       
+        "index": {
+            "Ariticle 1 (Classification and General Provisions.)": ["page 1", "https://www.ncleg.gov/enactedlegislation/statutes/pdf/bychapter/chapter_147.pdf#page=1&zoom=100,36,36"],
+            "Ariticle 2 (Expenses of State Officers and State Departments.)": ["page 2", "https://www.ncleg.gov/enactedlegislation/statutes/pdf/bychapter/chapter_147.pdf#page=2&zoom=100,300,300"],
+            "Ariticle 2A (Annuities and Deferred Compensation for Teachers and State Employees.)": ["page 3", "https://www.ncleg.gov/enactedlegislation/statutes/pdf/bychapter/chapter_147.pdf#page=3&zoom=100,300,300"],
+            "Ariticle 3 (The Governor)": ["page 5", "https://www.ncleg.gov/enactedlegislation/statutes/pdf/bychapter/chapter_147.pdf#page=5&zoom=100,200,200"],
+            "Ariticle 3A (Emergency War Powers of Governor.)": ["page 17", "https://www.ncleg.gov/enactedlegislation/statutes/pdf/bychapter/chapter_147.pdf#page=17&zoom=100,500,500"],
+            "Ariticle 4 (Secretary of State.)": ["page 23", "https://www.ncleg.gov/enactedlegislation/statutes/pdf/bychapter/chapter_147.pdf#page=23&zoom=100,100,100"],
+            "Ariticle 4A (Constitutional Amendments Publication)": ["page 34", "https://www.ncleg.gov/enactedlegislation/statutes/pdf/bychapter/chapter_147.pdf#page=34&zoom=100,200,200"],
+            "Ariticle 4B (Business License Information Office.)": ["page 34", "https://www.ncleg.gov/enactedlegislation/statutes/pdf/bychapter/chapter_147.pdf#page=34&zoom=100,500,500"],
+            "Ariticle 4C (Executive Branch Lobbying.)": ["page 34", "https://www.ncleg.gov/enactedlegislation/statutes/pdf/bychapter/chapter_147.pdf#page=34&zoom=100,700,700"],
+            "Ariticle 5 (Auditor.)": ["page 34", "https://www.ncleg.gov/enactedlegislation/statutes/pdf/bychapter/chapter_147.pdf#page=34&zoom=100,800,800"],
+            "Ariticle 5A (Auditor.)": ["page 35", "https://www.ncleg.gov/enactedlegislation/statutes/pdf/bychapter/chapter_147.pdf#page=35&zoom=100,300,300"],
+            "Ariticle 6 (Treasurer.)": ["page 46", "https://www.ncleg.gov/enactedlegislation/statutes/pdf/bychapter/chapter_147.pdf#page=46&zoom=100,800,800"],
+            "Ariticle 6A (Cash Management.)": ["page 73", "https://www.ncleg.gov/enactedlegislation/statutes/pdf/bychapter/chapter_147.pdf#page=73&zoom=100,600,600"],
+            "§ 147-85.": ["Fiscal year", ""],
+            "Artical 6A (Cash Management)": {
+                "§ 147-86.10.": ["Statement of policy.", ""],
+                "§ 147-77.": "Daily deposit of funds to credit of Treasurer.",
+                "§ 147-69.1": "Investments authorized for General Fund and Highway Funds assets."
+            },
+            "§ 147-86.10.": {
+                "name": "Statement of policy.",
+                "link": ""
+            },
+            "§ 147-77": {
+                "name": "Daily deposit of funds to credit of Treasurer.",
+                "link": ""
+            },
+            "§ 147-69.1": {
+                "name": "Investments authorized for General Fund and Highway Funds assets.",
+                "links": {
+                    "§ 147-69.1": "Investments authorized for General Fund and Highway Funds assets.",
+                    "§ link 69.1": "https://www.ncleg.gov/enactedlegislation/statutes/pdf/bychapter/chapter_147.pdf#page=48&zoom=100,500,500",
+                    "147-69.1(c)": {
+                        "§ 147-69.2": "Investments authorized for special funds held by State Treasurer.",
+                        "§ link 69.2": "https://www.ncleg.gov/enactedlegislation/statutes/pdf/bychapter/chapter_147.pdf#page=52&zoom=100,100,100"
+                    }
+                }
+            },
+            "Ariticle 6B (Statewide Accounts Receivable Program.)": ["page 77", "https://www.ncleg.gov/enactedlegislation/statutes/pdf/bychapter/chapter_147.pdf#page=77&zoom=100,800,800"],
+            "Ariticle 6C (Health and Wellness Trust Fund.)": ["page 81", "https://www.ncleg.gov/enactedlegislation/statutes/pdf/bychapter/chapter_147.pdf#page=81&zoom=100,500,500"],
+            "Ariticle 6D (Sudan (Darfur) Divestment Act.)": ["page 81", "https://www.ncleg.gov/enactedlegislation/statutes/pdf/bychapter/chapter_147.pdf#page=81&zoom=100,900,900"],
+            "Ariticle 6E (Iran Divestment Act.)": ["page 82", "https://www.ncleg.gov/enactedlegislation/statutes/pdf/bychapter/chapter_147.pdf#page=82&zoom=100,400,400"],
+            "Ariticle 6F (Achieving a Better Life Experience Program Trust.": ["page 86", "https://www.ncleg.gov/enactedlegislation/statutes/pdf/bychapter/chapter_147.pdf#page=86&zoom=100,600,600"],
+            "Ariticle 6G (Divestment From Companies Boycotting Israel.)": ["page 92", "https://www.ncleg.gov/enactedlegislation/statutes/pdf/bychapter/chapter_147.pdf#page=92&zoom=100,700,700"],
+            "Ariticle 7 (Secretary of Revenue.)": ["page 94", "https://www.ncleg.gov/enactedlegislation/statutes/pdf/bychapter/chapter_147.pdf#page=94&zoom=100,900,900"],
+            "Ariticle 8 (District Attorneys.)": ["page 95", "https://www.ncleg.gov/enactedlegislation/statutes/pdf/bychapter/chapter_147.pdf#page=95&zoom=100,300,300"]
+        },
+        "Articles": {
+        "G.S. 147-69.1(c)(1)": "Investments authorized by G.S. 147-69.1(c)(1)-(7)",
+        "G.S. 147-69.1(c)(2)": "General obligations of other states of the United States.",
+        "G.S. 147-69.1(c)(3)": "General obligations of cities, counties and special districts in North Carolina.",
+        "147-69.1(c)": {
+            "Securities and Exchange Commission": {
+                "G.S. 147-69.1(c)(4)": [
+                    "Obligations of:",
+                    "   any company,",
+                    "   other organization",
+                    "   legal entity incorporated",
+                    "or, otherwise created or located within or outside the United States, including:",
+                    "   obligations that are convertible into equity securities,",
+                    "   if, when acquired, the obligations are within one of the four highest rating categories regardless of:",
+                    "       gradations, such as ratings beginning with 'AAA,' 'AA,' 'A,' or either 'BBB'",
+                    "       or 'Baa,' of at least one nationally recognized rating service designated by the",
+                    "       U.S. Securities and Exchange Commission."
+                ],
+                "G.S. 147-69.1(c)(5)": "Repealed by Session Laws 2001-444, s. 2, effective October 1, 2001.",
+                "G.S. 147-69.1(c)(6)": [
+                    "Asset-backed securities (whether considered debt or equity), if, when acquired,",
+                    "the obligations are within one of the four highest ratings categories regardless of",
+                    "gradations:",
+                    "   such as ratings beginning with 'AAA,' 'AA,' 'A,' or either 'BBB', or 'Baa,'",
+                    "   of at least one nationally recognized rating service designated by the",
+                    "   U.S. Securities and Exchange Commission."
+                ]
+            },
+            "Retirement Systems": {
+                "G.S. 147-69.1(c)(6a)": [
+                    "In addition to the limitations and requirements with respect to the investments",
+                    "of the Retirement Systems set forth in this subsection, the State Treasurer shall",
+                    "   select investments of the assets of the Retirement Systems such that investments",
+                    "   made pursuant to:",
+                    "       subdivisions (b)(1) through (6) of this section shall at all times",
+                    "       equal or exceed twenty percent (20%) of the market value of all invested assets",
+                    "       of the Retirement Systems."
+                ],
+                "G.S. 147-69.1(c)(6b)": "Repealed by Session Laws 2016-55, s. 1.3, effective January 31, 2017.",
+                "G.S. 147-69.1(c)(6c)": [
+                    "With respect to Retirement Systems' assets referred to in subdivision (b)(8),",
+                    "they may be invested: ",
+                    "   within or outside the United States,",
+                    "   in obligations,",
+                    "   debt",
+                    "   securities,",
+                    "   asset-backed securities,",
+                    "whether considered debt or equity,",
+                    "including obligations and securities convertible into other securities,",
+                    "that do not, meet the requirements of:",
+                    "   any of subdivisions (b)(1) through (6) of this section",
+                    "   nor subdivision (b)(7) of this section.",
+                    "The amount invested under this subdivision shall not exceed (7.5%) of the market value",
+                    "of all invested assets of the Retirement Systems."
+                ],
+                "G.S. 147-69.1(c)(7)": [
+                    "Retirement Systems' assets referred to in subdivision (8) of this subsection may",
+                    "be invested in strategies managed primarily for the purpose of owning:",
+                    "   real estate or related debt financing,",
+                    "   excluding asset-backed financing and timberlands, located within or outside the United States." ,
+                    "The amount invested under this subdivision shall not exceed (10%) of the market value of",
+                    "all invested assets of the Retirement Systems."
+                ]
+            }
+        },
+        "G.S. 147-69.1 and G.S. 147-69.2": {
+            "§ 147-69.9": "Third-party audit of State Treasurer's investments",
+            "§ link 69.9": "https://www.ncleg.gov/enactedlegislation/statutes/pdf/bychapter/chapter_147.pdf#page=64&zoom=100,300,300"
+        }
+    }
+    }
+}

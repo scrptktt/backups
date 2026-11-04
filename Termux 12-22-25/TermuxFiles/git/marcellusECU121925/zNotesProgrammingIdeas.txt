@@ -1,0 +1,4 @@
+____________________
+VScode settings.json
+I need to encapsulate highlighted selection in parenthesis on ctrl+shift+() etc...
+[autocomplete brackets?]

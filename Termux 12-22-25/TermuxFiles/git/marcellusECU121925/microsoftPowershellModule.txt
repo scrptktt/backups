@@ -1,0 +1,119 @@
+https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fpowershell%2Fmodule%2Fpsdocs%2Ftoc.json%3Fview%3Dpowershell-5.1#page=1510
+https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fwindows%2Fwin32%2Fcom%2Ftoc.json 
+
+"Export-BinaryMiLog": {
+    "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fpowershell%2Fmodule%2Fpsdocs%2Ftoc.json%3Fview%3Dpowershell-5.1#page=2"
+    "1": "Get-CimInstance Win32_Process | Export-BinaryMiLog -Path 'Processes.bmil' | notepad 'Processes.bmil'"
+},
+"Get-CimAssociatedInstance": {
+    "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fpowershell%2Fmodule%2Fpsdocs%2Ftoc.json%3Fview%3Dpowershell-5.1#page=7"
+    "1": "Get-CimAssociatedInstance -InputObject (Get-CimInstance -ClassName Win32_service -KeyOnly)[1]",
+    "y": "Get-CimAssociatedInstance -InputObject (Get-CimInstance -ClassName Win32_service -KeyOnly)[1] -ResultClass Win32_DependentService",
+    "y": "Get-CimAssociatedInstance -InputObject (Get-CimInstance -Query \"Select * from Win32_Service where name like 'Winmgmt'\") -Association Win32_DependentService",
+    "y": "",
+    "y": "",
+    "Z": ""
+},
+"": {
+    "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fpowershell%2Fmodule%2Fpsdocs%2Ftoc.json%3Fview%3Dpowershell-5.1#page=2"
+    "1": "",
+    "y": "",
+    "Z": ""
+},
+
+"TESTING": {
+    "ACT Combined English/Writing"              20, "03/01/2013",     "Electronic Reporting",
+    "ACT Composite",                        20,     "03/01/2013",     "Electronic Reporting",
+    "ACT English",                          21,     "03/01/2013",     "Electronic Reporting",
+    "ACT Math",                             22,     "03/01/2013",     "Electronic Reporting",
+    "ACT Reading",                          17,     "03/01/2013",     "Electronic Reporting",
+    "ACT Science Reasoning",              18, "03/01/2013",     "Electronic Reporting",
+    "ACT Subscore Alg/Geometry",          12, "03/01/2013",     "Electronic Reporting",
+    "ACT Subscore Arts/Literature",             08, "03/01/2013",     "Electronic Reporting",
+    "ACT Subscore Elem Algebra",          10, "03/01/2013",     "Electronic Reporting",
+    "ACT Subscore Plane Geom"/Trig",    11,   "03/01/2013",     "Electronic Reporting",
+    "ACT Subscore Rhetorical Skills",       11,     "03/01/2013",     "Electronic Reporting",
+    "ACT Subscore Social Studies",              09, "03/01/2013",     "Electronic Reporting",
+    "ACT Subscore Usage & Mech",          10, "03/01/2013",     "Electronic Reporting",
+    "ACT Subscore Writing",                 07,     "03/01/2013",     "Electronic Reporting",
+    "ACT Sum of Standard Score",          078,      "03/01/2013",     "Electronic Reporting",
+    "English Language & Composition",       2,      "05/01/2013",     "Electronic Reporting",
+    ""Predicted GPA",                 2847,   "03/28/2013"    "",
+    ""Predicted GPA",                 2847,   "04/01/2013"    "",
+    "United States History",              1,  "05/01/2013",     "Electronic Reporting"
+}
+
+
+function Enable-ProcessCreationEvent
+{
+ $Query =
+<event-class>                               <__InstanceCreationEvent>>  https://learn.microsoft.com/en-us/windows/win32/wmisdk/--instancecreationevent
+ New-Object System.Management.WqlEventQuery "__InstanceCreationEvent",
+ <event-class>
+ (New-Object TimeSpan 0,0,1),
+ "TargetInstance isa 'Win32_Process'"
+                     <<Win32_Process>   https://learn.microsoft.com/en-us/windows/win32/cimwin32prov/win32-process
+                <isa>                   https://learn.microsoft.com/en-us/windows/win32/wmisdk/isa-operator-for-schema-queries
+
+ $ProcessWatcher =
+ New-Object System.Management.ManagementEventWatcher $Query
+ 
+ $Identifier = "WMI.ProcessCreated"
+ 
+ Register-ObjectEvent
+ $ProcessWatcher "EventArrived" -SupportEvent $Identifier `
+ -Action
+ {
+  [void] (New-Event -SourceId "PowerShell.ProcessCreated" -Sender $args[0] `
+  -EventArguments $args[1].SourceEventArgs.NewEvent.TargetInstance)
+ }
+}
+
+The following example shows how the
+client receives notification
+
+when an instance of Win32_Process is created
+
+.            
+For more information,
+see the Windows Management Instrumentation documentation.
+node1:
+node2:
+node3:
+
+The client receives events [synchronously]
+by calling the [WaitForNextEvent] method.    
+--
+
+value array for undeclared parameters passed to a:
+    function,
+    script, or
+    script block.
+
+When you create a function,
+parameters can be declared with the param keyword or
+parameters can be declared by adding a comma-separated list of parameters in parentheses after the function name
+
+In an event action,
+$args contains objects that represent event arguments of the processed event.
+               
+This variable is populated only within the Action block of an event registration command.
+               
+The value of this variable can also be found in
+the SourceArgs property of the PSEventArgs object
+that Get-Event returns.
+--
+New-Event raises an event in response to another event.
+
+A WMI event is raised when a process is created.
+(Register-ObjectEvent subscribes to this event)
+
+Register-ObjectEvent -Action parameter calls New-Event creating a new event.
+events are automatically added to the PowerShell event queue.
+
+--
+https://learn.microsoft.com/en-us/archive/msdn-magazine/2000/msdn-magazine-issues-from-2000
+C++
+https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_type_accelerators?view=powershell-7.5
+predecessor antecedent independent dependent
+https://colorcomputerarchive.com/repo/

@@ -1,0 +1,46 @@
+{
+    "designed for psdocs (modules)": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fpowershell%2Fmodule%2Fpsdocs%2Ftoc.json%3Fview%3Dpowershell-5.1",
+    "command": {
+        "1": {
+            "description": "",
+            "command": "",
+            "page": ""
+        },
+        "2.escape": {
+                "description": "",
+                "command": "",
+                "page": "",
+                "link": "",
+                "association": {
+                        "": ""
+                }
+        },
+        "3": {
+                "description": "",
+                "command": "",
+                "page": "",
+                "discovery": {
+                        "link": "",
+                        "example": "",
+                        "facts": {
+                                "1": "",
+                                "y": "Determines whether services are currently running",
+                                "z": "return information about a service and its configurations",
+                                "discovery-bonus": {
+                                    "description": "",
+                                    "link": ""
+                                }
+                        },
+                        "Methods": {},
+                        "internal discovery": {
+                            "link": "",
+                            "description": "",
+                            "vocabulary": ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""]
+                        }
+                },
+                "discovery2": {
+                        "": ""
+                }
+        }
+}
+}

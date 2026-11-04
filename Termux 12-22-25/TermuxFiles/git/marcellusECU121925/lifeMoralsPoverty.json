@@ -1,0 +1,28 @@
+{
+    "Gemini": {
+        "how is there money for homeless food": {
+            "sources": {
+                "Federal/State Grants": [
+                    "FEMA's EFSP",
+                    "USDA's TEFAP"
+                ],
+                "Non-Profit Organizations": [
+                    "Feeding America network",
+                    "Salvation Army"
+                ],
+                "3": "Corporate/Foundation Donations",
+                "4": "Community Groups",
+                "5": "Individual Giving"
+            },
+            "Channeled to": [
+                "local food banks",
+                "shelters"
+            ]
+
+        },
+        "b": {
+
+        }
+    }
+    
+}

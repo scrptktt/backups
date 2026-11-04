@@ -1,0 +1,403 @@
+{
+    "name": "WMI",
+    "link": "",
+    "about_WMI_cmdlets": {
+        "WMI.description": "provide WMI information",
+        "WMI.components": [
+            "WMI cmdlets for Windows PowerShell,",
+            "WMI-based remoting",
+            "WMI accelerators", 
+            "WMI troubleshooting"
+        ],
+        "WMI.about": {
+            "description":"used to manage both local and remote computers.",
+            "example1": "Start processes",
+            "example2": "Restart a computer",
+            "example3": "list installed applications",
+            "example4": "Query Windows event logs",
+
+            "who": "WMI is the Microsoft (WBEM) WebBased Enterprise Management.",
+            "purpose": "for accessing management information", 
+            "model": {
+                "name": "(CIM) Common Information Model",
+                "represents": [
+                    "systems", 
+                    "applications", 
+                    "networks", 
+                    "devices", 
+                    "other managed components"
+                ],
+                "developers": "(DMTF) Distributed Management Task Force"
+            }
+        },        
+        "WMI.cmdlets": {
+            "description": "these cmdlets manage local and remote computers.",
+
+            "Get-WmiObject": "Gets instances of WMI classes or information about the available classes.",
+            "Invoke-WmiMethod": "Calls WMI methods.",
+            "Register-WmiEvent": "Subscribes to a WMI event",
+            "Remove-WmiObject": "Deletes WMI classes and instances.",
+            "Set-WmiInstance": "Creates or modifies instances of WMI classes."
+        },
+        "WMI.samples": {
+            "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fpowershell%2Fmodule%2Fpsdocs%2Ftoc.json%3Fview%3Dpowershell-5.1#page=1491",
+            "sample1": "Get-WmiObject Win32_BIOS | Format-List *",
+            "description1": "display the BIOS information",
+
+            "sample2a": "$wql = \"select * from Win32_Service where name='WinRM'\"",
+            "sample2b": "Get-WmiObject -Query $wql -ComputerName server01, server01, server03",
+            "sample2b-alt": "Get-WmiObject -Query $wql -ComputerName localhost",
+            "description2": "displays information about the WinRM service for three remote computers",
+            
+            "sample3a": "notepad.exe",
+            "sample3b": "$wql = \"select * from Win32_Process where name='notepad.exe'\"",
+            "sample3c": "$np = Get-WmiObject -Query $wql",
+            "sample3d": "$np | Remove-WmiObject",
+            "description3": "exit all instances of notepad."
+        },
+        "WMI.remoting": {
+            "feature1": "WMI management of local systems is useful.",
+            "feature2": "WMI remoting capabilities is a powerful administrative tool.",
+            "DCOM connections": "(DCOM) Distributed Component Object Model is used to connect to and manage systems",
+            "weakness": "WMI can be blocked by firewalls and locked-down DCOM permissions"
+        },
+        "WMI.type_accelerators": {
+            "description": "shortcuts which allow more direct access to WMI objects",
+            "type_accelerators": {
+                "[wmisearcher]": {
+                    "use": "for a 'ManagementObjectSearcher'",
+                    "constructor_parameters": "string",
+                    "application": "creates a searcher you can do a Get() on.",
+
+                    "example1a": "$s = [wmisearcher]'Select * from Win32_Process where HandleCount > 1000'",
+                    "example1b": "$s.Get() | sort-object HandleCount | format-table HandleCount, __PATH, Name -Auto"         
+
+                },
+                "[wmiclass]": {
+                    "description": "for accessing class static_properties/methods.",
+                    "constructor_parameters": "local/absolute WMI_path to a WMI_class",
+                    "return": "object bound to WMIclass",
+            
+                    "example1a": "$c = [wmiclass]\"root\\CIMV2:Win32_Process\"",
+                    "example1b": "$c | format-list *"
+                },
+                "[wmi]": {
+                    "description": "for getting single class instances.",
+                    "constructor_parameters": "local/absolute WMI_path to a WMI_instance",
+                    "return": "object bound to WMI_instance",
+
+                    "example1a": "$p = [wmi]'\\SERVER01\root\\CIMV32_Process.Handle=\"1204\"'",
+                    "example1b": "$p.Name"
+                }
+            }
+        },
+        "WMI.troubleshooting": {
+            "situation": "common problems trying to connect remotely",
+            
+            "Problem 1": {
+                "statement": "WMI cannot connect to offline remote computers",
+                "error_message": "Remote server machine does not exist or is unavailable",
+                "solution": "Try to ping the remote computer"
+            },
+            "Problem 2": {
+                "statement": "local admin rights are required on remote computers.",
+                "error": "If you do not, access to that computer will be denied.",
+                "solution": {
+                    "operation": "verify namespace security:",
+
+                    "step1": "Start -> Computer -> Manage.",
+                    "step2": "Computer Management -> Services and Applications -> WMI Control -> Properties.",
+                    "step3": "WMI Control Properties dialog box, click the Security tab"
+                }
+            },
+            "Problem 3": {
+                "statement": "A firewall is blocking access to the remote computer",
+                "network traversal protocols": [
+                    ["DCOM (Distributed COM)", "https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-dcom/4a893f3d-bd29-48cd-9f43-d9777a4415b0"],
+                    ["RPC (Remote Procedure Call)", "https://learn.microsoft.com/en-us/windows/win32/rpc/rpc-start-page"]
+                ],
+                "description": "By default windows firewalls rejects incoming WMI requests blocking all unsolicited network traffic including DCOM, WMI and RPC traffic.",
+                "error_message": "Remote server machine does not exist or is unavailable"
+            }
+        }
+    },
+    "about_WQL": {
+        "WQL.description": "(WQL) WMI Query Language, gets WMI objects in PowerShell",
+        "WQL.alternatives": "Get-WmiObject & Get-CimInstance parameters",
+        "WQL.benefits": "WQL is faster than Get-WmiObject commands",
+        "WQL.basics": "SELECT, WHERE, and FROM.",
+        "WQL.usage": {
+            "description": "both WMI and WQL use PowerShell",
+            "debugging": "PowerShell commands are easier to debug than WQL query",
+
+            "syntax": "SELECT WMI_property FROM WMI_class.",
+
+            "Query commands": {
+                "description": "WQL statements may be used with the parameter -Query.",
+
+                "all": "SELECT * FROM Win32_BIOS",
+                "specific": "SELECT <property> FROM <WMI-class>",
+                "multiple": "multiple property_names are seperated by commas",
+                
+                "[wmisearcher]": {
+                    "example.1a": "$queryName = [wmisearcher]'SELECT name FROM Win32_BIOS'",
+                    "example.1b": "$queryName.Get()",
+
+                    "example.2a": "$queryNameVersion = [wmisearcher]'SELECT name, version FROM Win32_BIOS'",
+                    "example.2b": "$queryNameVersion.Get()"
+                },
+                "Get-WmiObject": {
+                    "example.1a": "$queryName = \"SELECT Name FROM Win32_BIOS\"",
+                    "example.1b": "Get-WmiObject -Query $queryName",
+                    
+                    "example.2a": "$queryNameVersion = \"SELECT Name, version FROM Win32_BIOS\"",
+                    "example.2b": "Get-WmiObject -Query $queryNameVersion",
+                    
+                    "example3": "(Get-WmiObject -Query \"SELECT * FROM Win32_BIOS\").GetType().FullName",
+                    "returns": "GetWmiObject returns a ManagementObject"
+                },
+                "Get-CimInstance": {
+                    "description1":"Get-CimInstance runs WQL queries",
+                    "description2":"WMI_classes are instances of CIM-compliant classes",
+                    "description3": "The CIM cmdlets perform the same tasks as the WMI cmdlets.",
+                    "description4": "CIM enables cmdlets to use the same techniques to manage Windows computers and other operating systems.",
+
+                    "The CIM cmdlets comply with the standards": [
+                        "WS-Management (WSMan)",
+                        "Common Information Model (CIM)"
+                    ],
+
+                    "example1": "Get-CimInstance -Query \"SELECT * FROM Win32_BIOS\"",
+                    
+                    "example2": "(Get-CimInstance -Query \"SELECT * FROM Win32_BIOS\").GetType().FullName",
+                    "returns": "Get-CimInstance returns a CimInstance object"
+                },
+                "note1": "BIOS names are selected from WMI_class Win32_BIOS.",
+                "note2": "PowerShell object default properties are defined Types.ps1xml. Select-Object or Format-* displays additional properties."
+            }                
+        },
+        "[wmisearcher]": {
+            "description": "This lets you query WMI and to configure the way the query is conducted.",
+            "description1": "[wmisearcher] gives easy access to the ManagementObjectSearcher .NET class.",
+            "description2": "[wmisearcher] creates a ManagementObjectSearcher object from a WQL statement string.",
+            "description3": "The ManagementObjectSearcher object has many properties and methods",
+            "description4": "The Get method invokes WMI queries and returning objects.",
+
+            "example1a": "$bios = [wmisearcher]\"SELECT * FROM Win32_BIOS\"",
+            "example1b": "$bios.Get()",
+            "use1": {
+                "1": "Cast the WQL string into a ManagementObjectSearcher object",
+                "2": "Call the Get method of the ManagementObjectSearcher object"
+            },
+            "example2a": "$a = \"SELECT * FROM Win32_BIOS\"",
+            "example2b": "$a.GetType().FullName",
+            "example2c": "$a = [wmisearcher]\"SELECT * FROM Win32_BIOS\"",
+            "example2d": "$a.GetType().FullName",
+            "use2": "[wmisearcher] can be used to cast queries and variables.",
+
+            "example4a": "$biosName = [wmisearcher]\"Select Name from Win32_BIOS\"",
+            "example4b": "$biosName.Get()",
+            "use3": "gets Name property of the Win32_BIOS WMI class"
+        },
+        "WHERE": {
+            "syntax": "WHERE <property> <operator> <value>",
+            "example1": "WHERE Name = 'Notepad.exe'",
+            "example2": "SELECT * FROM Win32_Process WHERE Name = 'Notepad",
+            "example3": "Get-WmiObject -Query \"SELECT * FROM Win32_Process WHERE name='Notepad'\"",
+            "use": "property name and value must be accurate (notepad not notepad.exe)",
+            "Operators.comparison": {
+                "=": "equal",
+                "!=": "Not equal",
+                "<>": "Not equal",
+                "<": "Less than",
+                ">": "Greater than",
+                "<=": "Less than or equal",
+                "=>": "Greater than or equal",
+                "LIKE": "Wildcard match",
+                "IS": "Evaluates null",
+                "ISNOT": "Evaluates not null",
+                "ISA": "Evaluates a member of a WMI class",
+                
+                "example1a": "$highPriority = \"Select Name, Priority from Win32_Process \" + \"WHERE Priority >= 11\"",
+                "example1b": "Get-WmiObject -Query $highPriority",
+                "useage": "select processes -gt -eq 11",
+
+                "fact": "WQL operators can be used in the -Filter parameter",
+                "example": "getprocessIDsplat.ps1",
+                "exampleOne": "$getWmiObjectSplat = @{ Class = 'Win32_Process'; Property = 'Name', 'ProcessId'; Filter = 'ProcessId >= 1004'}; Get-WmiObject @getWmiObjectSplat | Sort-Object ProcessId | Select-Object Name, ProcessId -Last 5",
+                "usage": {
+                    "1": "get the last five processes with ProcessId -gt than 1004.",
+                    "2": "The Filter parameter is used to specify the condition."
+                }
+            }
+        },
+        "LIKE": {
+            "description": "LIKE allows filtering with wildcard patterns",
+            "fact": {
+                "a": "LIKE behaves like equals (=) when used without range or wildcards,",
+                "b": "returning objects only when they're an exact pattern matches."
+            },
+
+            "[]": {
+                "type": "range",
+
+                "example1": "Notepad",
+                "example2": "$query = \"SELECT * FROM Win32_Process WHERE Name LIKE '[H-N]otepad.exe'\"",
+                "example3": "Get-WmiObject -Query $query | select Name, ProcessId",
+                "usage": "search for anof the Win32_Process class instances with names [H-N]",
+
+                "exampleOne": "Notepad; $query = \"SELECT * FROM Win32_Process WHERE Name LIKE '[H-N]otepad.exe'\"; Get-WmiObject -Query $query | select Name, ProcessId;"
+            },
+            "[]%": {
+                "type": "AnyRange",
+                "fact": "range can be combined with percent (%) for simple/powerful filters.",
+
+                "example1": "$query = \"SELECT * FROM Win32_Process WHERE name LIKE '[A-P]%'\"",
+                "example2": "Get-WmiObject -Query $query | Select-Object -Property Name, ProcessId | Sort-Object -Property Name",
+                "usage": {
+                    "Pipeline1": "select process names begining between [A-P] followed by zero or more letters.",
+                    "Pipeline2a": "Get-WmiObject runs the query",
+                    "Pipeline2b": "Select-Object gets the properties",
+                    "Pipeline2c": "Sort-Object sorts the results"
+                },
+                        
+                "exampleOne": "$query = \"SELECT * FROM Win32_Process WHERE name LIKE '[A-P]%'\"; Get-WmiObject -Query $query | Select-Object -Property Name, ProcessId | Sort-Object -Property Name"
+            },
+            "^": {
+                "type": "not in range",
+
+                "example1": "$query = \"SELECT * FROM Win32_Process WHERE name LIKE '[^ASWPRCUN]%'\"",
+                "example2": "Get-WmiObject -Query $query | Select-Object -Property Name, ProcessId | Sort-Object -Property Name",                
+                "usage": "search for an  of the Win32_Process class instances with names [H-N]",
+                        
+                "exampleOne": "$query = \"SELECT * FROM Win32_Process WHERE name LIKE '[^ASWPRCUN]%'\"; Get-WmiObject -Query $query | Select-Object -Property Name, ProcessId | Sort-Object -Property Name;"
+            },
+            "%": {
+                "type": "any or none",
+                "fact": "In WQL (%) is identical to (*) in PowerShell.",
+
+                "example1": "$query = \"SELECT * FROM Win32_Process WHERE Name LIKE 'calc%'\"",
+                "example2": "Get-WmiObject -Query $query | Select-Object -Property Name, ProcessId",
+                "usage": "get process names that begin with calc.",
+                        
+                "exampleOne": "$query = \"SELECT * FROM Win32_Process WHERE Name LIKE 'calc%'\"; Get-WmiObject -Query $query | Select-Object -Property Name, ProcessId"
+            },
+            "_": {
+                "type": "one character",
+                "requirement": "enclosed in braces",
+
+                "example1": "$query = \"SELECT * FROM Win32_Process WHERE Name LIKE 'c_lc.exe'\"",
+                "example2": "Get-WmiObject -Query $query | Select-Object -Property Name, ProcessId", 
+                "usage": "get process names with the pattern c_lc.exe",
+                        
+                "exampleOne": "$query = \"SELECT * FROM Win32_Process WHERE Name LIKE 'c_lc.exe'\"; Get-WmiObject -Query $query | Select-Object -Property Name, ProcessId"
+            },
+            "Exact match": {
+                "fact": "Matches without wildcards require exact matches",
+                        
+                "example1": "$query = \"SELECT * FROM Win32_Process WHERE name LIKE 'WLIDSVC.exe'\"",
+                "example2": "Get-WmiObject -Query $query | Select-Object -Property Name, ProcessId", 
+                "usage": "get process named WLIDSVC.exe",
+                        
+                "exampleOne": "$query = \"SELECT * FROM Win32_Process WHERE name LIKE 'WLIDSVC.exe'\"; Get-WmiObject -Query $query | Select-Object -Property Name, ProcessId"
+            }
+        },
+        "OR": {
+            "description": "",
+            "fact1": "The OR keyword appears in the WHERE clause.",
+            "fact4": "The OR statement can be used with more than two conditions.",
+            "fact2": "OR specifies multiple independent conditions.",
+            "syntax": "WHERE <property> <operator> <value> OR <property> <operator> <value> ...",
+            "returns": "returns items using an inclusive OR operation of 2+ conditions",
+
+            "example1a": "start-process winword.exe, excel.exe",
+            "example1b": "$q = \"SELECT * FROM Win32_Process WHERE Name='winword.exe' OR Name='excel.exe'",
+            "example1c": "Get-WmiObject -Query $q",
+            "usage": "returns winword.exe OR excel.exe out of all Win32_Process instances.",
+
+            "example2a": "start-process winword.exe, excel.exe, powershell.exe",
+            "example2b": "([wmisearcher]\"select * from win32_process where name='winword.exe' OR name='excel.exel'\").Get()",
+
+            "example1One": "start-process winword.exe, excel.exe; $q = \"SELECT * FROM Win32_Process WHERE Name='winword.exe' OR Name='excel.exe'; Get-WmiObject -Query $q",
+            "example2One": "start-process winword.exe, excel.exe, powershell.exe; ([wmisearcher]\"select * from win32_process where name='winword.exe' OR name='excel.exel'\").Get()"
+        },
+        "AND": {
+            "fact1": "AND specifies multiple related conditions in he WHERE clause.",
+            "fact2": "All operators are valid with OR & AND operators",
+            "syntax": "WHERE <property> <operator> <value> `AND` <property> <operator> <value> ...",
+
+            "combination clauses": {
+                "description": "OR & AND operators may be combined in queries with",
+                "requirements": "parentheses indicating which clauses to process first"
+            },
+
+            "example1a": "$q = \"SELECT * FROM Win32_Process WHERE Name = 'winword.exe' AND ProcessId =6512\"",
+            "example1b": "Get-CimInstance -Query $q",
+            "usage": "get processes named Winword.exe with an ID of 6512.",
+
+            "exampleOne": "$q = \"SELECT * FROM Win32_Process WHERE Name = 'winword.exe' AND ProcessId =6512\"; Get-CimInstance -Query $q"
+        },
+        "Searching for null values": {
+            "fact1": "Some WMI class properties are initialized and others aren't",
+            "fact2": "a search for null might not work for all properties.",
+            "fact3": "gets processes with a null value for the IntallDate property.",
+    
+            "example1": "$q = \"SELECT * FROM Win32_Process WHERE InstallDate IS null\"; Get-WmiObject -Query $q",
+            "usage1": "gets processes where InstallDate=NULL",
+
+            "example2": "$q = \"SELECT * FROM Win32_UserAccount WHERE Description IS null\"; Get-WmiObject -Query $q",
+            "usage2": {
+                "1": "get user accounts with a null value for the Description property.",
+                "2": "This command doesn't return any user accounts",
+                "3": "most user accounts don't have a Description property"
+            },
+
+            "example3a": "$q = \"SELECT * FROM Win32_UserAccount WHERE Description= ''",
+            "example3b": "([wmisearcher]$q).Get()",
+            "usage3": {
+                "1": "gets user accounts without a Description property value",
+                "2": "an equality operator with single quotes returns no value, not NULL."
+            },
+
+            "example3One": "$q = \"SELECT * FROM Win32_UserAccount WHERE Description= ''; ([wmisearcher]$q).Get()"
+        },
+        "Using true or false": {
+            "example1a": "$q = \"SELECT * FROM Win32_UserAccount WHERE LocalAccount = True\"",
+            "example1b": "Get-CimInstance -Query $q",
+            "usage1": "return local user accounts from a domain joined computer.",
+
+            "example2a": "$q = \"SELECT * FROM Win32_UserAccount WHERE LocalAccount = False\"",
+            "example2b": "Get-CimInstance -Query $q",
+            "usage2": "False returns domain accounts",
+        
+            "example1One": "$q = \"SELECT * FROM Win32_UserAccount WHERE LocalAccount = True\"; Get-CimInstance -Query $q",
+            "example2One": "$q = \"SELECT * FROM Win32_UserAccount WHERE LocalAccount = False\"; Get-CimInstance -Query $q"
+        },
+        "Using the escape character": {
+            "fact1": "WQL uses backslashes (\\) as Escape characters.",
+            "fact2": "PowerShell uses backticks (`) as Escape characters.",
+            "fact3": "Quotation marks need to be escaped in strings.",
+            "fact4": "backslashes need to be escaped in strings.",
+
+            "example1a": "$q = \"SELECT * FROM Win32_UserAccount WHERE Name = 'Tim O\\'Brian'\"",
+            "example1b": "Get-CimInstance -Query $q",
+            "usage1": {
+                    "1": "To finds a username including a single quote",
+                    "2": "a backslash escapes a single quote"
+            },
+            
+            "example2a": "$q = \"SELECT * FROM Win32_UserAccount WHERE Caption = 'Fabrikam\\TimO'\"",
+            "example2b": "Get-CimInstance -Query $q",
+            "usage2": "a backslash is escaped preventing an error.",
+
+
+            "example1One": "$q = \"SELECT * FROM Win32_UserAccount WHERE Name = 'Tim O\\'Brian'\"; Get-CimInstance -Query $q",
+            "example2One": "$q = \"SELECT * FROM Win32_UserAccount WHERE Caption = 'Fabrikam\\TimO'\"; Get-CimInstance -Query $q\""
+        }
+    },
+    "summary": {
+
+    }
+}
+
+

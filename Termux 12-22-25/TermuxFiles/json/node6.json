@@ -1,0 +1,112 @@
+{
+    "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fwindows%2Fwin32%2Fcom%2Ftoc.json",
+    "title": "(COM) Component Object Model",
+    "Fundamentals.Guide": {
+        "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fwindows%2Fwin32%2Fcom%2Ftoc.json#page=4"
+    },
+    "Fundamentals.Reference": {
+        "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fwindows%2Fwin32%2Fcom%2Ftoc.json#page=374",
+        "Constants": {
+            "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fwindows%2Fwin32%2Fcom%2Ftoc.json#page=375"
+        },
+        "Functions": {
+            "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fwindows%2Fwin32%2Fcom%2Ftoc.json#page=605"
+        },
+        "Enumerations": {
+            "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fwindows%2Fwin32%2Fcom%2Ftoc.json#page=1813"
+        },
+        "Macros": {
+            "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fwindows%2Fwin32%2Fcom%2Ftoc.json#page=1581"
+        },
+        "Interfaces": {
+            "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fwindows%2Fwin32%2Fcom%2Ftoc.json#page=692"
+        },
+        "Structures": {
+            "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fwindows%2Fwin32%2Fcom%2Ftoc.json#page=1740",
+            "ACTRL_ACCESS": {
+                "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fwindows%2Fwin32%2Fcom%2Ftoc.json#page=374"
+            },
+            "ACTRL_ACCESS_ENTRY": {
+                "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fwindows%2Fwin32%2Fcom%2Ftoc.json#page=374"
+            },
+            "ACTRL_ACCESS_ENTRY_LIST": {
+                "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fwindows%2Fwin32%2Fcom%2Ftoc.json#page=374"
+            },
+            "ACTRL_PROPERTY_ENTRY": {
+                "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fwindows%2Fwin32%2Fcom%2Ftoc.json#page=374"
+            },
+            "BIND_OPTS": {
+                "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fwindows%2Fwin32%2Fcom%2Ftoc.json#page=374"
+            },
+            "BIND_OPTS2": {
+                "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fwindows%2Fwin32%2Fcom%2Ftoc.json#page=374"
+            },
+            "BIND_OPTS3": {
+                "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fwindows%2Fwin32%2Fcom%2Ftoc.json#page=374"
+            },
+            "CALLFRAME_MARSHALCONTEXT": {
+                "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fwindows%2Fwin32%2Fcom%2Ftoc.json#page=374"
+            },
+            "CALLFRAMEINFO": {
+                "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fwindows%2Fwin32%2Fcom%2Ftoc.json#page=374"
+            },
+            "CALLFRAMEPARAMINFO": {
+                "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fwindows%2Fwin32%2Fcom%2Ftoc.json#page=374"
+            },
+            "CATEGORYINFO": {
+                "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fwindows%2Fwin32%2Fcom%2Ftoc.json#page=374"
+            },
+            "COAUTHIDENTITY": {
+                "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fwindows%2Fwin32%2Fcom%2Ftoc.json#page=374"
+            },
+            "COAUTHINFO": {
+                "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fwindows%2Fwin32%2Fcom%2Ftoc.json#page=374"
+            },
+            "CONNECTDATA": {
+                "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fwindows%2Fwin32%2Fcom%2Ftoc.json#page=374"
+            },
+            "COSERVERINFO": {
+                "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fwindows%2Fwin32%2Fcom%2Ftoc.json#page=374"
+            },
+            "CSPLATFORM": {
+                "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fwindows%2Fwin32%2Fcom%2Ftoc.json#page=374"
+            },
+            "INTERFACEINFO": {
+                "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fwindows%2Fwin32%2Fcom%2Ftoc.json#page=374"
+            },
+            "MULTI_QI": {
+                "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fwindows%2Fwin32%2Fcom%2Ftoc.json#page=374"
+            },
+            "ORPC_DBG_ALL": {
+                "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fwindows%2Fwin32%2Fcom%2Ftoc.json#page=374"
+            },
+            "ORPC_DBG_BUFFER": {
+                "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fwindows%2Fwin32%2Fcom%2Ftoc.json#page=374"
+            },
+            "ORPC_INIT_ARGS": {
+                "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fwindows%2Fwin32%2Fcom%2Ftoc.json#page=374"
+            },
+            "QUERYCONTEXT": {
+                "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fwindows%2Fwin32%2Fcom%2Ftoc.json#page=374"
+            },
+            "RPCOLEMESSAGE": {
+                "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fwindows%2Fwin32%2Fcom%2Ftoc.json#page=374"
+            },
+            "SOLE_AUTHENTICATION_INFO": {
+                "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fwindows%2Fwin32%2Fcom%2Ftoc.json#page=374"
+            },
+            "SOLE_AUTHENTICATION_LIST": {
+                "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fwindows%2Fwin32%2Fcom%2Ftoc.json#page=374"
+            },
+            "SOLE_AUTHENTICATION_SERVICE": {
+                "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fwindows%2Fwin32%2Fcom%2Ftoc.json#page=374"
+            },
+            "SOleTlsData": {
+                "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fwindows%2Fwin32%2Fcom%2Ftoc.json#page=374"
+            }
+        },
+        "Registry Entries": {
+            "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fwindows%2Fwin32%2Fcom%2Ftoc.json#page=1615"
+        }
+    }
+}

@@ -1,0 +1,153 @@
+{
+    "WMI": {
+
+    },
+    "DCOM": {
+        "Commands": {
+            "1": ["Get-EventLog -LogName System -newest 5", "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fpowershell%2Fmodule%2Fpsdocs%2Ftoc.json%3Fview%3Dpowershell-5.1#page=3112"],
+            "2": ["Get-EventLog -LogName System -Newest 1000 | Group-Object -Property Source -NoElement | Sort-Object -Property Count -Descending", "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fpowershell%2Fmodule%2Fpsdocs%2Ftoc.json%3Fview%3Dpowershell-5.1#page=3112"],
+            "3": ["Get-EventLog -LogName System -EntryType Error", "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fpowershell%2Fmodule%2Fpsdocs%2Ftoc.json%3Fview%3Dpowershell-5.1#page=3113"],
+            "4": ["Get-EventLog -LogName System -InstanceId 10016 -Source DCOM", "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fpowershell%2Fmodule%2Fpsdocs%2Ftoc.json%3Fview%3Dpowershell-5.1#page=3113"],
+            "5": ["Get-EventLog -LogName System -Message *description*", "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fpowershell%2Fmodule%2Fpsdocs%2Ftoc.json%3Fview%3Dpowershell-5.1#page=3114"],
+            "6": ["Get-EventLog -LogName System -EntryType Error -After (Get-Date -Date '1/17/2022 08:00:00') -Before (Get-Date -Date '12/13/2025 00:00:00')", "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fpowershell%2Fmodule%2Fpsdocs%2Ftoc.json%3Fview%3Dpowershell-5.1#page=3117"],
+            "7": ["Restart-Computer -ComputerName Server01 -Impersonation Anonymous -DcomAuthentication PacketIntegrity", "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fpowershell%2Fmodule%2Fpsdocs%2Ftoc.json%3Fview%3Dpowershell-5.1#page=3622"],
+            "8": ["Restart-Computer -ComputerName Server01 -Protocol WSMan -WsmanAuthentication Kerberos", "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fpowershell%2Fmodule%2Fpsdocs%2Ftoc.json%3Fview%3Dpowershell-5.1#page=3622"],
+            "9": ["Stop-Computer -ComputerName Server01 -Impersonation Anonymous -DcomAuthentication PacketIntegrity", "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fpowershell%2Fmodule%2Fpsdocs%2Ftoc.json%3Fview%3Dpowershell-5.1#page=3867"],
+            "10": ["Stop-Computer -ComputerName (Get-Content -Path ./Domain01.txt) -Force -ThrottleLimit 10 -Credential (Get-Credential -Credential Domain01\\Admin01)", "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fpowershell%2Fmodule%2Fpsdocs%2Ftoc.json%3Fview%3Dpowershell-5.1#page=3867"],
+            "11": ["New-CimSession -ComputerName localhost -SessionOption (New-CimSessionOption -Protocol Dcom)", "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fpowershell%2Fmodule%2Fpsdocs%2Ftoc.json%3Fview%3Dpowershell-5.1#page=129"]
+        },
+        "recommended": {
+            "nodeX": "CimSession"
+        },
+        "links": {
+            "1": {
+                "link": "https://learn.microsoft.com/en-us/windows/win32/com/hkey-local-machine-software-microsoft-ole",
+                "Registry values": ["DCOMSCMRemoteCallFlags", "EnableDCOM"]
+            },
+            "2": {
+                "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fpowershell%2Fmodule%2Fpsdocs%2Ftoc.json%3Fview%3Dpowershell-5.1#page=3620",
+                "words": ["Restart-Computer", "AsJobSet", "WS-Management Protocol","-DcomAuthentication <AuthenticationLevel>", "-WsmanAuthentication <String>"],
+                "description": "protocol to use to rename the computer."
+            },
+            "3": {
+                "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fpowershell%2Fmodule%2Fpsdocs%2Ftoc.json%3Fview%3Dpowershell-5.1#page=3865",
+                "words": ["Stop-Computer", "AsJobSet", "WS-Management Protocol","-DcomAuthentication <AuthenticationLevel>", "-WsmanAuthentication <String>"],
+                "description": ""
+            },
+            "4": {
+                "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fpowershell%2Fmodule%2Fpsdocs%2Ftoc.json%3Fview%3Dpowershell-5.1#page=3922",
+                "words": ["Test-Connection", "AsJobSet", "Quiet", "WS-Management Protocol","-DcomAuthentication <AuthenticationLevel>", "-WsmanAuthentication <String>"],
+                "description": "Sends ICMP echo request packets, or pings."
+            },
+            "5": {
+                "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fpowershell%2Fmodule%2Fpsdocs%2Ftoc.json%3Fview%3Dpowershell-5.1#page=5395",
+                "words": ["Set-WmiInstance", "ComputerName", "URI", "XmlElement", "HTTPS listener", "OptionSet", "http://server01:8080/WSMAN"],
+                "description": ""
+            },
+            "6": {
+                "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fpowershell%2Fmodule%2Fpsdocs%2Ftoc.json%3Fview%3Dpowershell-5.1#page=5420",
+                "words": ["connection/transport layer", "CimCmdlets", "UseSSL", "SessionOption", "SelectorSet", "Port"],
+                "description": ""
+            },
+            "7": {
+                "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fpowershell%2Fmodule%2Fpsdocs%2Ftoc.json%3Fview%3Dpowershell-5.1#page=136",
+                "words": ["-PacketIntegrity", "-PacketPrivacy", "-Protocol", "", "", ""],
+                "description": "specify COM PacketIntegrity functionality in DCOM"
+            },
+            "8": {
+                "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fpowershell%2Fmodule%2Fpsdocs%2Ftoc.json%3Fview%3Dpowershell-5.1#page=136",
+                "words": ["ClassNameSessionSet", "QueryExpressionComputerSet", "Remove-CimInstance", "", "", ""],
+                "description": ""
+            },
+            "9": {
+                "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fopenspecs%2Fwindows_protocols%2Fms-dcom%2Ftoc.json#page=10&zoom=100,500,500",
+                "sublinks": {
+                    "1": "https://marcellus-ecu.github.io/Marcellus.student/[MC-MQAC].pdf",
+                    "Protocol Stack": "https://marcellus-ecu.github.io/Marcellus.student/[MC-MQAC].pdf#page=20&zoom=100,500,500",
+                    "MSMQ": ["C++", "https://learn.microsoft.com/en-us/previous-versions/windows/desktop/msmq/ms700277(v=vs.85)#example"],
+                    "Widget Toolkits": ["C++", "https://en.wikipedia.org/wiki/Template:Widget_toolkits"],
+                    "MSDN Magazine": ["C++", "PowerShell", "https://learn.microsoft.com/en-us/archive/msdn-magazine/2007/december/windows-with-c-windows-template-library-8-0"],
+                    "kenny kurr1": ["C++", "https://web.archive.org/web/20070127082943/https://weblogs.asp.net/kennykerr/archive/2006/11/10/windows-vista-for-developers-_1320_-part-6-_1320_-the-new-file-dialogs.aspx"],
+                    "kenny kurr2": "https://web.archive.org/web/20070207043054/http://www.kennyandkarin.com/kenny/Websites/",
+                    "windows.github.io": ["win32", "https://www.google.com/search?q=site%3A%2F%2Fmicrosoft.github.io%2Fwindows-docs-rs%2Fdoc%2Fwindows%2F+%22win32%22&sca_esv=bc46a1b77fbf88b4&rlz=1C1GCEA_enUS1192US1192&sxsrf=AE3TifOPjPXPV0YBTidnah4Acm9Jv1mn1A%3A1765671166446&ei=_gA-ac_-GsSymtkPsODH-AM&ved=2ahUKEwjP9anV5buRAxVEmSYFHTDwET8Q4dUDegQIBRAN&uact=5&oq=site%3A%2F%2Fmicrosoft.github.io%2Fwindows-docs-rs%2Fdoc%2Fwindows%2F+%22win32%22&gs_lp=Egxnd3Mtd2l6LXNlcnAiP3NpdGU6Ly9taWNyb3NvZnQuZ2l0aHViLmlvL3dpbmRvd3MtZG9jcy1ycy9kb2Mvd2luZG93cy8gIndpbjMyIkilEVDfAliXDHABeACQAQCYAWqgAe4DqgEDNS4xuAEDyAEA-AEBmAICoALQAcICBRAhGKsCwgIFEAAY7wXCAggQABiABBiiBJgDAIgGAZIHAzEuMaAHmAmyBwMxLjG4B9ABwgcFMC4xLjHIBwSACAA&sclient=gws-wiz-serp"],
+                    "OWL Object windows Library": ["C++", "https://www.jahanshahi.ws/home.html"],
+                    "OWL Object windows Library1": ["C++", "https://www.jogy.net/"],
+                    "OWL Object windows Library2": ["C++", "https://www.luigibianchi.com/owl.htm"],
+                    "OWL Object windows Library3": ["C++", "https://www.softwareuno.com/"],
+                    "ATL Active Template Library": ["C++", "https://learn.microsoft.com/en-us/cpp/atl/active-template-library-atl-concepts?view=msvc-170"],
+                    "Windows API": ["https://en.wikipedia.org/wiki/Windows_API"]
+                },
+                "words": ["", "", "", "", "", ""],
+                "description": ""
+            }
+        }
+    },
+    "WSMan": {
+        "commands": {
+            "1": ["Get-EventLog -LogName System -newest 5", "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fpowershell%2Fmodule%2Fpsdocs%2Ftoc.json%3Fview%3Dpowershell-5.1#page=3112"]
+        },
+        "links": {
+            "1": {
+                "link": "https://learn.microsoft.com/en-us/windows/win32/com/hkey-local-machine-software-microsoft-ole",
+                "Registry values": ["DCOMSCMRemoteCallFlags", "EnableDCOM"]
+            },
+            "2": {
+                "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fpowershell%2Fmodule%2Fpsdocs%2Ftoc.json%3Fview%3Dpowershell-5.1#page=3572",
+                "words": ["-Protocol", "WSMan"],
+                "description": "protocol to use to rename the computer."
+            }
+        }
+    },
+    "COM": {
+        "Bookmark": "search number 827",
+        "links": {
+            "mainlink": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fwindows%2Fwin32%2Fcom%2Ftoc.json",
+            "1": {
+                "link": "https://learn.microsoft.com/en-us/windows/win32/com/hkey-local-machine-software-classes",
+                "Registry values": "<ProgID>"
+            },
+            "2": {
+                "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fpowershell%2Fmodule%2Fpsdocs%2Ftoc.json%3Fview%3Dpowershell-5.1#page=3922",
+                "words": ["New-Object", "Net", "Com", ".NET Framework", "ProgID", "ComObject"],
+                "description": "Sends ICMP echo request packets, or pings."
+            },
+            "3": {
+                "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fpowershell%2Fmodule%2Fpsdocs%2Ftoc.json%3Fview%3Dpowershell-5.1#page=7",
+                "words": ["(COM) session", "-ComputerName", "(FQDN) or a NetBIOS name", "", "", ""],
+                "description": ""
+            },
+            "COM detectve": {
+                "1": "https://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/",
+                "2": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fpowershell%2Fmodule%2Fpsdocs%2Ftoc.json%3Fview%3Dpowershell-5.1#page=232",
+                "-Join": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fpowershell%2Fmodule%2Fpsdocs%2Ftoc.json%3Fview%3Dpowershell-5.1#page=841",
+                "HRESULT": "https://www.google.com/search?q=%22HRESULT+Init%28+%5Bin%2C+optional%5D+VARIANT*+Machine%2C+%5Bin%2C+optional%5D+VARIANT*+Pathname%2C+%5Bin%2C+optional%5D+VARIANT*+FormatName+%29%3B%22&sca_esv=3b9b536d53084c4a&rlz=1C1GCEA_enUS1192US1192&sxsrf=AE3TifMM1l3_wochOc2gqPlw0FUZPaaX0w%3A1765669098193&ei=6vg9afi0C_ShqtsPnY61sA8&ved=2ahUKEwj40Y373buRAxX0kGoFHR1HDfYQ4dUDegQIBRAN&uact=5&oq=%22HRESULT+Init%28+%5Bin%2C+optional%5D+VARIANT*+Machine%2C+%5Bin%2C+optional%5D+VARIANT*+Pathname%2C+%5Bin%2C+optional%5D+VARIANT*+FormatName+%29%3B%22&gs_lp=Egxnd3Mtd2l6LXNlcnAieCJIUkVTVUxUIEluaXQoIFtpbiwgb3B0aW9uYWxdIFZBUklBTlQqIE1hY2hpbmUsIFtpbiwgb3B0aW9uYWxdIFZBUklBTlQqIFBhdGhuYW1lLCBbaW4sIG9wdGlvbmFsXSBWQVJJQU5UKiBGb3JtYXROYW1lICk7IkgAUABYAHAAeACQAQCYAQCgAQCqAQC4AQPIAQD4AQGYAgCgAgCYAwCSBwCgBwCyBwC4BwDCBwDIBwCACAA&sclient=gws-wiz-serp"
+            }
+        },
+        "ProgID": {
+            "commands": {
+
+            }
+        }
+    },
+    "OLE": {
+        "links": {
+            "OLE MSJ": "https://jacobfilipp.com/MSJ/1995/1995-08.pdf"
+        }
+    },
+    "NuGet": {
+        "links": {
+            "": ""
+        }
+    },
+    "ASP.NET": {
+        "links": {
+            "": ""
+        }
+    },
+    "SCM": {
+        "links": {
+            "1": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fwindows%2Fwin32%2Fservices%2Ftoc.json#page=17",
+            "2": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fwindows%2Fwin32%2Fapi%2F_security%2Ftoc.json#page=10371"
+        }
+    }
+}

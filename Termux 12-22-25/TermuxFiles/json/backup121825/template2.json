@@ -1,0 +1,17 @@
+{
+    "classname": {
+        "description": "",
+        "Requirements": {
+            "Minimum supported client"  : "",
+            "Minimum supported server"  : "",
+            "Namespace"                 : "",
+            "MOF"                       : "",
+            "DLL"                       : ""
+        },
+        "property sample": {
+
+        },
+        "link": "",
+        "related": ""
+    }
+}

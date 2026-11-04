@@ -1,0 +1,168 @@
+{
+    "CimSession": {
+        "Export-BinaryMiLog": {
+            "1": {
+                "description": "Create a binary representation of CimInstances",
+                "command": "Get-CimInstance Win32_Process | Export-BinaryMiLog -Path 'Processes.bmil' | notepad 'Processes.bmil'",
+                "page": "2",
+                "similar": "Import-Clixml"
+            }
+        },
+        "Get-CimAssociatedInstance": {
+            "1": {
+                "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fpowershell%2Fmodule%2Fpsdocs%2Ftoc.json%3Fview%3Dpowershell-5.1#page=7",
+                "description": "associated instances of a specific instance",
+                "command": "Get-CimAssociatedInstance -InputObject (Get-CimInstance -ClassName Win32_service -KeyOnly)[1]",
+                "page": "7",
+                "Discovery": {
+                    "Win32_Service class": {
+                        "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fwindows%2Fwin32%2Fcimwin32prov%2Ftoc.json#page=5162",
+                        "example": "displayServices.vbs",
+                        "facts": {
+                            "1": "WMI Win32_Service class to enumerate the services",
+                            "2": "Determines whether services are currently running",
+                            "3": "return information about a service and its configurations",
+                            "4": "Win32_Service class is derived from Win32_BaseService",
+                            "5": "services conform to interface rules of (SCM) Service Control Manager",
+                            "6": {
+                                "6a": "A computers role is determined by its services",
+                                "6b": "properties between a DNS and DHCP server",
+                                "6c": "properties between database, e-mail, or multimedia server",
+                                "6d": "Microsoft® Exchange vs Microsoft® Windows Media® servers" 
+                            },
+                            "Win32.SC_MANAGER_CONNECT": {
+                                "Description": "Privilege must be enabled to connect remotely",
+                                "Link1": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fwindows%2Fwin32%2Fservices%2Ftoc.json", 
+                                "Link2": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fwindows%2Fwin32%2Fservices%2Ftoc.json#page=62"
+                            }
+                        },
+                        "Methods": {
+                            "Change":               "Modifies a service.",
+                            "ChangeStartMode":      "Modifies the start mode of a service.",
+                            "Create":               "Creates a new service.",
+                            "Delete":               "Deletes an existing service.",
+                            "GetSecurityDescriptor": "Returns the security descriptor that controls access to the service.",
+                            "InterrogateService":   "Requests that a service update its state to the service manager.",
+                            "PauseService":         "Attempts to place a service in the paused state.",
+                            "ResumeService":        "Attempts to place a service in the resumed state.",
+                            "SetSecurityDescriptor": "Writes an updated version of the security descriptor that controls access to the service.",
+                            "StartService":         "Attempts to place a service into the startup state.",
+                            "StopService":          "Places a service in the stopped state.",
+                            "UserControlService":   "Attempts to send a user-defined control code to a service"
+                        },
+                        "(MOF) Managed Object Format": {
+                            "WMI Components": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fwindows%2Fwin32%2Fwmisdk%2Ftoc.json#page=16",
+                            "Tasks": [
+                                "Compiling MOF Files",
+                                "Creating a Class",
+                                "Creating an Instance",
+                                "Creating a Method",
+                                "Adding a Qualifier",
+                                "Creating a Comment",
+                                "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fwindows%2Fwin32%2Fwmisdk%2Ftoc.json#page=28"
+                            ],
+                            "keyphrases": ["Setting WMI namespace security", "WMI MOF/DLL files", "%WINDIR%\\System32\\Wbem", " Winmgmt.exe & Mofcomp.exe", "Provider classes are defined", "CIM Schema version or DMTF MOF files", "Interop.mof file", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""],
+                            "reference": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fwindows%2Fwin32%2Fwmisdk%2Ftoc.json#page=3691"
+                        }
+                    },
+                    "-InputObject": {
+                        "links": {
+                            "1": {
+                                "description": "Provides access to the InputObject parameter",
+                                "keywords": ["C++", "dotnet"],
+                                "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fdotnet%2Fps_dotnet_toc%2Fapi%2F_splitted%2Fmicrosoft.powershell.utility.activities%2Ftoc.json%3Fview%3Dpowershellsdk-1.1.0#page=581"
+                            },
+                            "2": {
+                                "description": "Provides access to the InputObject parameter",
+                                "keywords": ["C++", "dotnet", "ServiceController"],
+                                "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fdotnet%2Fps_dotnet_toc%2Fapi%2F_splitted%2Fmicrosoft.powershell.commands%2Ftoc.json%3Fview%3Dpowershellsdk-7.4.0#page=3983"
+                            }
+                        }
+                    },
+                    "-ClassName": "see classes.json",
+                    "-KeyOnly": {
+                        "1": {
+                                "description": "Provides access to the KeyOnly parameter.",
+                                "property.value": "InArgument<SwitchParameter>",
+                                "attributes": "DefaultValueAttribute",
+                                "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fdotnet%2Fps_dotnet_toc%2Fapi%2F_splitted%2Fmicrosoft.powershell.activities%2Ftoc.json%3Fview%3Dpowershellsdk-1.1.0#page=147"
+                        } ,
+                        "2": {
+                                "description": "Indicates that only key properties of the retrieved instances should be returned to the client.",
+                                "property.value": "SwitchParameter",
+                                "attributes": "ParameterAttribute",
+                                "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fdotnet%2Fps_dotnet_toc%2Fapi%2F_splitted%2Fmicrosoft.management.infrastructure.cimcmdlets%2Ftoc.json%3Fview%3Dpowershellsdk-7.4.0#page=85"
+                        }
+                    }
+                }
+            },
+            "2": {
+                "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fpowershell%2Fmodule%2Fpsdocs%2Ftoc.json%3Fview%3Dpowershell-5.1#page=7",
+                "description": "Get all the associated instances of a specific type",
+                "command": "Get-CimAssociatedInstance -InputObject (Get-CimInstance -ClassName Win32_service -KeyOnly)[1] -ResultClass Win32_DependentService",
+                "page": "7",
+                "Discovery": {
+                    "-ResultClass": {
+                        "Inheritance": "Object → Result",
+                        "description": "Provides access to the KeyOnly parameter.",
+                        "Attributes": "DataContractAttribute, SerializableAttribute",
+                        "Link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fdotnet%2Fapi%2Fsystem-center-sm-dotnet-sdk%2Ftoc.json%3Fview%3Dsc-sm-dotnet-2016#page=3138",
+
+                        "DataContractAttribute": {
+                            "Definition": {
+                                "inheritance": "Object → Attribute → DataContractAttribute",
+                                "attributes": "AttributeUsageAttribute",
+                                "source": "DataContractAttribute.cs",
+                                "namespace": "System.Runtime.Serialization",
+                                "assemblies": [
+                                        "netstandard.dll", 
+                                        "System.Runtime.Serialization.Primitives.dll"
+                                ]
+                            },
+                            "Description": {
+                                "1": "The type defines or implements a data contract",
+                                "2": "is serializable by a serializer, such as the DataContractSerializer",
+                                "3": "To make their type serializable, type authors must define a data contract for their type"
+                            },
+                            "example": "see DataContractAttributeExample.cs",
+                            "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fdotnet%2Fapi%2F_splitted%2Fsystem.runtime.serialization%2Ftoc.json%3Fview%3Dnet-10.0#page=30",
+                            "additional": "https://learn.microsoft.com/en-us/dotnet/fundamentals/runtime-libraries/system-runtime-serialization-datacontractattribute"
+                        },
+                        "SerializableAttribute": {
+                            "Definition": {
+                                "inheritance": "Object → Attribute → SerializableAttribute",
+                                "attributes": "AttributeUsageAttribute",
+                                "source": "SerializableAttribute.cs",
+                                "namespace": "System",
+                                "assemblies": [
+                                        "netstandard.dll", 
+                                        "System.Runtime.dll"
+                                ]
+                            },
+                            "Description": {
+                                "1": "Indicates that a class can be serialized using binary or XML serialization.",
+                                "2": "This class cannot be inherited."
+                            },
+                            "example": "see objectSOAPserialization.cs",
+                            "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fdotnet%2Fapi%2F_splitted%2Fsystem%2Ftoc.json%3Fview%3Dnet-10.0#page=8668"
+                        }
+                    }
+                }
+            },
+            "3.escaped": {
+                "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fpowershell%2Fmodule%2Fpsdocs%2Ftoc.json%3Fview%3Dpowershell-5.1#page=8",
+                "description": "Get all the associated instances through qualifier of a specific class",
+                "command": "Get-CimAssociatedInstance -InputObject (Get-CimInstance -Query \"Select * from Win32_Service where name like 'Winmgmt'\") -Association Win32_DependentService",
+                "page": "8",
+                "Discovery": {
+                    "Win32_DependentService": {
+                        "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fwindows%2Fwin32%2Fcimwin32prov%2Ftoc.json#page=4768"
+                    },
+                    "-Association": {
+                        "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fdotnet%2Fps_dotnet_toc%2Fapi%2F_splitted%2Fmicrosoft.powershell.activities%2Ftoc.json%3Fview%3Dpowershellsdk-1.1.0#page=114"
+                    }
+                }
+            }
+        }
+    }
+}

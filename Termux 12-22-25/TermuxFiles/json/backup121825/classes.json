@@ -1,0 +1,410 @@
+{
+    "Operating System Classes": {
+        "link": "https://learn.microsoft.com/en-us/windows/win32/cimwin32prov/operating-system-classes",
+        "pdflink": "https://learn.microsoft.com/en-us/windows/win32/cimwin32prov/operating-system-classes",
+        "site": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fwindows%2Fwin32%2Fcimwin32prov%2Ftoc.json#page=4463",
+
+        "COM subcategory groups classes": {
+                "summary": "represent COM and DCOM settings, classes, and client application settings",
+                "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fwindows%2Fwin32%2Fcimwin32prov%2Ftoc.json#page=4464",
+                "Win32_ClassicCOMApplicationClasses":   ["Association class Relates an executable and a DCOM application that contains the DCOM configuration options for the executable file.", ""],
+                "Win32_ClassicCOMClass":                ["Association class Relates a COM class and the settings used to configure instances of the COM class.", ""],
+                "Win32_ClassicCOMClassSettings":        ["Association class Relates a DCOM application and a COM component grouped under it.", ""],
+                "Win32_ClientApplicationSetting":       ["Instance class Represents the properties of a COM component.", ""],
+                "Win32_COMApplication":                 ["Instance class Represents a COM application.", ""],
+                "Win32_COMApplicationClasses":          ["Association class Relates a COM component and the COM application where it resides.", ""],
+                "Win32_COMApplicationSettings":         ["Association class Relates a DCOM application and its configuration settings.", ""],
+                "Win32_COMClass":                       ["Instance class Represents the properties of a COM component.", ""],
+                "Win32_ComClassAutoEmulator":           ["Association class Relates a COM class and another COM class that it automatically emulates.", ""],
+                "Win32_ComClassEmulator":               ["Association class Relates two versions of a COM class.", ""],
+                "Win32_ComponentCategory":              ["Instance class Represents a component category.", ""],
+                "Win32_COMSetting":                     ["Instance class Represents the settings associated with a COM component or COM application.", ""],
+                "Win32_DCOMApplication":                ["Instance class Represents the properties of a DCOM application.", ""],
+                "Win32_DCOMApplicationAccessAllowedSetting": ["Association class Relates the Win32_DCOMApplication instance and the user security identifications (SID) that can access it.", ""],
+                "Win32_DCOMApplicationLaunchAllowedSetting": ["Association class Relates the Win32_DCOMApplication instance and the user SIDs that can launch it.", ""],
+                "Win32_DCOMApplicationSetting":         ["Instance class Represents the settings of a DCOM application.", ""],
+                "Win32_ImplementedCategory":            ["Association class Relates a component category and the COM class using its interfaces.", ""]
+        },
+        "Desktop subcategory groups classes": {
+                "summary": "represent objects that define a specific desktop configuration",
+                "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fwindows%2Fwin32%2Fcimwin32prov%2Ftoc.json#page=4465",
+                "Win32_Desktop":        ["Instance class Represents the common characteristics of a user's desktop.", ""],
+                "Win32_Environment":    ["Instance class Represents an environment or system environment setting on a computer system running Windows.", ""],
+                "Win32_TimeZone":       ["Instance class Represents the time zone information for a computer system running Windows.", ""],
+                "Win32_UserDesktop":    ["Association class Relates a user account and the desktop settings that are specific to it.", ""]
+        },
+        "Drivers subcategory groups classes": {
+                "summary": "represent virtual device drivers and system drivers for base services",
+                "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fwindows%2Fwin32%2Fcimwin32prov%2Ftoc.json#page=4465",
+                "Win32_SystemDriver":   ["Instance class Represents the system driver for a base service.", ""]
+        },
+        "File System subcategory groups classes": {
+                "summary": "represent the way a hard disk is logically arranged",
+                "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fwindows%2Fwin32%2Fcimwin32prov%2Ftoc.json#page=4466",
+                "Win32_CIMLogicalDeviceCIMDataFile":    ["Association class Relates logical devices and data files, indicating the driver files used by the device.", ""],
+                "Win32_Directory":                      ["Instance class Represents a directory entry on a computer system running Windows.", ""],
+                "Win32_DirectorySpecification":         ["Instance class Represents the directory layout for the product.", ""],
+                "Win32_DiskDriveToDiskPartition":       ["Association class Relates a disk drive and a partition existing on it.", ""],
+                "Win32_DiskPartition":                  ["Instance class Represents the capabilities and management capacity of a partitioned area of a physical disk on a computer system running Windows.", ""],
+                "Win32_DiskQuota":                      ["Association class Tracks disk space usage for NTFS file system volumes.", ""],
+                "Win32_LogicalDisk":                    ["Represents a data source that resolves to an actual local storage device on a computer system running Windows.", ""],
+                "Win32_LogicalDiskRootDirectory":       ["Association class Relates a logical disk and its directory structure.", ""],
+                "Win32_LogicalDiskToPartition":         ["Association class Relates a logical disk drive and the disk partition it resides on.", ""],
+                "Win32_MappedLogicalDisk":              ["Represents network storage devices that are mapped as logical disks on the computer system running Windows.", ""],
+                "Win32_OperatingSystemAutochkSetting":  ["Association class Represents the association between a CIM_ManagedSystemElement instance and the settings defined for it.", ""],
+                "Win32_QuotaSetting":                   ["Instance class Contains setting information for disk quotas on a volume.", ""],
+                "Win32_ShortcutFile":           ["Instance class Represents files that are shortcuts to other files, directories, and commands.", ""],
+                "Win32_SubDirectory":           ["Association class Relates a directory (folder) and one of its subdirectories (subfolders).", ""],
+                "Win32_SystemPartitions":       ["Association class Relates a computer system and a disk partition on that system.", ""],
+                "Win32_Volume":                 ["Instance class Represents an area of storage on a hard disk.", ""],
+                "Win32_VolumeQuota":            ["Association class Relates a volume to the per volume quota settings.", ""],
+                "Win32_VolumeQuotaSetting":     ["Association class Relates disk quota settings with a specific disk volume.", ""],
+                "Win32_VolumeUserQuota":        ["Association class Relates per user quotas to quota-enabled volumes.", ""]
+        },
+        "Job Objects subcategory groups classes": {
+                "summary1": "represent classes that provide the means of instrumenting named job objects",
+                "summary2": "An unnamed job object cannot be instrumented",
+                "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fwindows%2Fwin32%2Fcimwin32prov%2Ftoc.json#page=4468",
+                "Win32_CollectionStatistics":           ["Association class Relates a managed system element collection and the class representing statistical information about the collection.", ""],
+                "Win32_LUID":                           ["Instance class Represents a locally unique identifier (LUID)", ""],
+                "Win32_LUIDandAttributes":              ["Instance class Represents a LUID and its attributes.", ""],
+                "Win32_NamedJobObject":                 ["Instance class Represents a kernel object that is used to group processes for the sake of controlling the life and resources of the processes within the job object.", ""],
+                "Win32_NamedJobObjectActgInfo":         ["Instance class Represents the I/O accounting information for a job object.", ""],
+                "Win32_NamedJobObjectLimit":            ["Instance class Represents an association between a job object and the job object limit settings.", ""],
+                "Win32_NamedJobObjectLimitSetting":     ["Instance class Represents the limit settings for a job object.", ""],
+                "Win32_NamedJobObjectProcess":          ["Instance class Relates a job object and the process contained in the job object.", ""],
+                "Win32_NamedJobObjectSecLimit":         ["Instance class Relates a job object and the job object security limit settings.", ""],
+                "Win32_NamedJobObjectSecLimitSetting":  ["Instance class Represents the security limit settings for a job object.", ""],
+                "Win32_NamedJobObjectStatistics":       ["Instance class Represents an association between a job object and the job object I/O accounting information class.", ""],
+                "Win32_SIDandAttributes":               ["Instance class Represents a security identifier (SID) and its attributes.", ""],
+                "Win32_TokenGroups":                    ["Event class Represents information about the group SIDs in an access token.", ""],
+                "Win32_TokenPrivileges":                ["Event class Represents information about a set of privileges for an access token.", ""]
+        },
+
+        "Memory and Page files subcategory groups classes": {
+                "summary": "represent page file configuration settings",
+                "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fwindows%2Fwin32%2Fcimwin32prov%2Ftoc.json#page=4469",
+                "Win32_PageFile":               ["Instance class Represents the file used for handling virtual memory file swapping on a Windows system.", ""],
+                "Win32_PageFileElementSetting": ["Association class Relates the initial settings of a page file and the state of those settings during normal use.", ""],
+                "Win32_PageFileSetting":        ["Instance class Represents the settings of a page file.", ""],
+                "Win32_PageFileUsage":          ["Instance class Represents the file used for handling virtual memory file swapping on a computer system running Windows.", ""]
+        },        
+        "class in the Multimedia Audio or Visual subcategory": {
+                "summary": "represents properties of the audio or video codec installed on the computer system",
+                "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fwindows%2Fwin32%2Fcimwin32prov%2Ftoc.json#page=4470",
+                "Win32_CodecFile": ["Instance class Represents the audio or video codec installed on the computer system.", ""]
+        },
+        "Networking subcategory groups classes": {
+                "summary": "represent network connections, network clients, and network connection settings such as the protocol used",
+                "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fwindows%2Fwin32%2Fcimwin32prov%2Ftoc.json#page=4470",
+                "Win32_ActiveRoute":            ["Association class Relates the current IP4 route to the persisted IP route table.", ""],
+                "Win32_IP4PersistedRouteTable": ["Instance class Represents persisted IP routes.", ""],
+                "Win32_IP4RouteTable":          ["Instance class Represents information that governs the routing of network data packets.", ""],
+                "Win32_IP4RouteTableEvent":     ["Event class Represents IP route change events.", ""],
+                "Win32_NetworkClient":          ["Instance class Represents a network client on a computer system running Windows.", ""],
+                "Win32_NetworkConnection":      ["Instance class Represents an active network connection in a Windows environment.", ""],
+                "Win32_NetworkProtocol":        ["Instance class Represents a protocol and its network characteristics on a computer system running Windows.", ""],
+                "Win32_NTDomain":               ["Instance class Represents a Windows NT domain.", ""],
+                "Win32_PingStatus":             ["Instance class Represents the values returned by the standard ping command.", ""],
+                "Win32_ProtocolBinding":        ["Association class Relates a system-level driver, network protocol, and network adapter.      ", ""]
+        },
+        "Operating System Events subcategory groups classes": {
+                "summary": "represent events in the operating system related to processes, threads, and system shutdown",
+                "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fwindows%2Fwin32%2Fcimwin32prov%2Ftoc.json#page=4470",
+                "Win32_ComputerShutdownEvent":  ["Event class Represents computer shutdown events.", ""],
+                "Win32_ComputerSystemEvent":    ["Event class Represents events related to a computer system.", ""],
+                "Win32_DeviceChangeEvent":      ["Event class Represents device change events resulting from the addition, removal, or modification of devices on the computer system.", ""],
+                "Win32_ModuleLoadTrace":        ["Event class Indicates that a process has loaded a new module.", ""],
+                "Win32_ModuleTrace":            ["Event class Base event for module events.", ""],
+                "Win32_ProcessStartTrace":      ["Event class Indicates that a new process has started.", ""],
+                "Win32_ProcessStopTrace":       ["Event class Indicates that a process has terminated.", ""],
+                "Win32_ProcessTrace":           ["Event class Base event for process events.", ""],
+                "Win32_SystemConfigurationChangeEvent": ["Event class Indicates that the device list on the system has been refreshed (a device has been added or removed, or the configuration changed).", ""],
+                "Win32_SystemTrace":            ["Event class Base class for all system trace events, including module, process, and thread traces.", ""],
+                "Win32_ThreadStartTrace":       ["Event class Indicates a new thread has started.", ""],
+                "Win32_ThreadStopTrace":        ["Event class Indicates that a thread has stopped.", ""],
+                "Win32_ThreadTrace":            ["Event class Base event class for thread events.", ""],
+                "Win32_VolumeChangeEvent":      ["Event class Represents a network-mapped drive event resulting from the addition of a network drive letter or mounted drive on the computer system.", ""]
+        },
+        "Operating System Settings subcategory groups classes": {
+                "summary": "represent the Operating System and its settings",
+                "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fwindows%2Fwin32%2Fcimwin32prov%2Ftoc.json#page=4471",
+                "Win32_BootConfiguration":              ["Instance class Represents the boot configuration of a computer system running Windows.", ""],
+                "Win32_ComputerSystem":                 ["Instance class Represents a computer system operating in a Windows environment.", ""],
+                "Win32_ComputerSystemProcessor":        ["Association class Relates a computer system and a processor running on that system.", ""],
+                "Win32_ComputerSystemProduct":          ["Instance class Represents a product.", ""],
+                "Win32_DependentService":               ["Association class Relates two interdependent base services.", ""],
+                "Win32_LoadOrderGroup":                 ["Instance class Represents a group of system services that define execution dependencies.", ""],
+                "Win32_LoadOrderGroupServiceDependencies": ["Instance class Represents an association between a base service and a load order group that the service depends on to start running.", ""],
+                "Win32_LoadOrderGroupServiceMembers":   ["Association class Relates a load order group and a base service.", ""],
+                "Win32_OperatingSystem":                ["Instance class Represents an operating system installed on a computer system running Windows.", ""],
+                "Win32_OperatingSystemQFE":             ["Association class Relates an operating system and product updates applied as represented in Win32_QuickFixEngineering.", ""],
+                "Win32_OSRecoveryConfiguration":        ["Instance class Represents the types of information that will be gathered from memory when the operating system fails.", ""],
+                "Win32_QuickFixEngineering":            ["Instance class Represents system-wide Quick Fix Engineering (QFE) or updates that have been applied to the current operating system.", ""],
+                "Win32_StartupCommand":         ["Instance class Represents a command that runs automatically when a user logs onto the computer system.", ""],
+                "Win32_SystemBootConfiguration": ["Association class Relates a computer system and its boot configuration.", ""],
+                "Win32_SystemDesktop":          ["Association class Relates a computer system and its desktop configuration.", ""],
+                "Win32_SystemDevices":          ["Association class Relates a computer system and a logical device installed on that system.", ""],
+                "Win32_SystemLoadOrderGroups":  ["Association class Relates a computer system and a load order group.", ""],
+                "Win32_SystemNetworkConnections": ["Association class Relates a network connection and the computer system on which it resides.", ""],
+                "Win32_SystemOperatingSystem":  ["Association class Relates a computer system and its operating system.", ""],
+                "Win32_SystemProcesses":        ["Association class Relates a computer system and a process running on that system.", ""],
+                "Win32_SystemProgramGroups":    ["Association class Relates a computer system and a logical program group.", ""],
+                "Win32_SystemResources":        ["Association class Relates a system resource and the computer system it resides on.", ""],
+                "Win32_SystemServices":         ["Association class Relates a computer system and a service program that exists on the system.", ""],
+                "Win32_SystemSetting":          ["Association class Relates a computer system and a general setting on that system.", ""],
+                "Win32_SystemSystemDriver":     ["Association class Relates a computer system and a system driver running on that computer system.", ""],
+                "Win32_SystemTimeZone":         ["Association class Relates a computer system and a time zone.", ""],
+                "Win32_SystemUsers":            ["Association class Relates a computer system and a user account on that system.", ""]
+        },
+        "Processes subcategory groups classes": {
+                "summary": "represent system processes and threads",
+                "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fwindows%2Fwin32%2Fcimwin32prov%2Ftoc.json#page=4474",
+                "Win32_Process":        ["Instance class Represents a sequence of events on a computer system running Windows.", ""],
+                "Win32_ProcessStartup": ["Instance class Represents the startup configuration of a computer system running Windows.", ""],
+                "Win32_Thread":         ["Instance class Represents a thread of execution.", ""]
+        },
+        "class in the Registry subcategory": {
+                "summary": "represents the contents of the Windows registry",
+                "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fwindows%2Fwin32%2Fcimwin32prov%2Ftoc.json#page=4474",
+                "Win32_Registry": ["Instance class Represents the system registry on a computer system running Windows.", ""]
+        },
+        "Scheduler Jobs subcategory groups classes": {
+                "summary": "represent scheduled job settings",
+                "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fwindows%2Fwin32%2Fcimwin32prov%2Ftoc.json#page=4474",
+                "Win32_CurrentTime":    ["Abstract class Represents an instance in time as component seconds, minutes, day of the week, and so on.", ""],
+                "Win32_ScheduledJob":   ["Instance class Represents a job scheduled using the Windows schedule service.", ""],
+                "Win32_LocalTime":      ["Instance class Represents a point in time returned as Win32_LocalTime objects that result from a query. The Hour property is returned as the local time in a 24-hour clock.", ""],
+                "Win32_UTCTime":        ["Instance class Represents a point in time that is returned as Win32_UTCTime objects that result from a query. The Hour property is returned as the coordinated universal time (UTC) time in a 24 hour clock.", ""]
+        },
+        "Security subcategory groups classes": {
+                "summary": "represent system security settings",
+                "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fwindows%2Fwin32%2Fcimwin32prov%2Ftoc.json#page=4475",
+                "Win32_AccountSID":                     ["Association class Relates a security account instance with a security descriptor instance.", ""],
+                "Win32_ACE":                            ["Instance class Represents an access control entry (ACE).", ""],
+                "Win32_LogicalFileAccess":              ["Association class Relates the security settings of a file or directory and one member of its discretionary access control list (DACL).", ""],
+                "Win32_LogicalFileAuditing":            ["Association class Relates the security settings of a file or directory one member of its system access control list (SACL).", ""],
+                "Win32_LogicalFileGroup":               ["Association class Relates the security settings of a file or directory and its group.", ""],
+                "Win32_LogicalFileOwner":               ["Association class Relates the security settings of a file or directory and its owner.", ""],
+                "Win32_LogicalFileSecuritySetting":     ["Instance class Represents security settings for a logical file.", ""],
+                "Win32_LogicalShareAccess":             ["Association class Relates the security settings of a share and one member of its DACL.", ""],
+                "Win32_LogicalShareAuditing":           ["Association class Relates the security settings of a share and one member of its SACL.", ""],
+                "Win32_LogicalShareSecuritySetting":    ["Instance class Represents security settings for a logical file.", ""],
+                "Win32_PrivilegesStatus":               ["Instance class Represents information about the privileges required to complete an operation.", ""],
+                "Win32_SecurityDescriptor":             ["Instance class Represents a structural representation of a SECURITY_DESCRIPTOR.", ""],
+                "Win32_SecuritySetting":                ["Instance class Represents security settings for a managed element.", ""],
+                "Win32_SecuritySettingAccess":          ["Instance class Represents the rights granted and denied to a trustee for a given object.", ""],
+                "Win32_SecuritySettingAuditing":        ["Instance class Represents the auditing for a given trustee on a given object.", ""],
+                "Win32_SecuritySettingGroup":           ["Association class Relates the security of an object and its group.", ""],
+                "Win32_SecuritySettingOfLogicalFile":   ["Instance class Represents security settings of a file or directory object.", ""],
+                "Win32_SecuritySettingOfLogicalShare":  ["Instance class Represents security settings of a shared object.", ""],
+                "Win32_SecuritySettingOfObject":        ["Association class Relates an object to its security settings.", ""],
+                "Win32_SecuritySettingOwner":           ["Association class Relates the security settings of an object and its owner.", ""],
+                "Win32_SID":                            ["Instance class Represents an arbitrary SID.", ""],
+                "Win32_Trustee":                        ["Instance class Represents a trustee.", ""]
+        },
+        "Services subcategory groups classes": {
+            "summary": "represent services and base services",
+            "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fwindows%2Fwin32%2Fcimwin32prov%2Ftoc.json#page=4477",
+            "Win32_BaseService":    ["Instance class Represents executable objects that are installed in a registry database maintained by the Service Control Manager.", ""],
+            "Win32_Service":        ["Instance class Represents a service on a computer system running Windows.", ""]
+        },
+        "Shares subcategory groups classes": {
+            "summary": "details of shared resources, such as printers and folders",
+            "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fwindows%2Fwin32%2Fcimwin32prov%2Ftoc.json#page=4477",
+            "Win32_DFSNode":                ["Association class Represents a root or junction node of a domain-based or standalone distributed file system (DFS).", ""],
+            "Win32_DFSNodeTarget":          ["Association class Represents the relationship of a DFS node to one of its targets.", ""],
+            "Win32_DFSTarget":              ["Association class Represents the target of a DFS node.", ""],
+            "Win32_ServerConnection":       ["Instance class Represents the connections made from a remote computer to a shared resource on the local computer.", ""],
+            "Win32_ServerSession":          ["Instance class Represents the sessions that are established with the local computer by users on a remote computer.", ""],
+            "Win32_ConnectionShare":        ["Association class Relates a shared resource on the computer and the connection made to the shared resource.", ""],
+            "Win32_PrinterShare":           ["Association class Relates a local printer and the share that represents it as it is viewed over a network.", ""],
+            "Win32_SessionConnection":      ["Association class Represents an association between a session established with the local server by a user on a remote machine, and the connections that depend on the session.", ""],
+            "Win32_SessionProcess": {
+                "description": "Association class Represents an association between a logon session and the processes associated with that session",     
+                "Requirements": {
+                    "Minimum supported client"      : "Windows Vista",
+                    "Minimum supported server"      : "Windows Server 2008",
+                    "Namespace"                     : "Root\\CIMV2",
+                    "MOF"                           : "CIMWin32.mof",
+                    "DLL"                           : "CIMWin32.dll"
+                },
+                "property sample": {
+                    "__GENUS"          : 2,
+                    "__CLASS"          : "Win32_SessionProcess",
+                    "__SUPERCLASS"     : "Win32_SessionResource",
+                    "__DYNASTY"        : "CIM_Dependency",
+                    "__RELPATH"        : "",
+                    "__PROPERTY_COUNT" : 2,
+                    "__DERIVATION"     : "{Win32_SessionResource, CIM_Dependency}",
+                    "__SERVER"         : "29LIBR-LAB-T8",
+                    "__NAMESPACE"      : "root\\cimv2",
+                    "__PATH"           : "",
+                    "Antecedent"       : "",
+                    "Dependent"        : "",
+                    "PSComputerName"   : "29LIBR-LAB-T8"
+                },
+                "link": "https://learn.microsoft.com/en-us/previous-versions/windows/desktop/eventlogprov/win32-ntlogeventlog#page=5260&zoom=100,400,400",
+                "related": "Win32_SessionResource"
+            },
+            "Win32_ShareToDirectory":       ["Association class Relates a shared resource on the computer system and the directory to which it is mapped.", ""],
+            "Win32_Share":                  ["Instance class Represents a shared resource on a computer system running Windows.", ""]
+        },
+        "Start Menu subcategory groups classes": {
+                "summary": "represent program groups",
+                "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fwindows%2Fwin32%2Fcimwin32prov%2Ftoc.json#page=4478",
+                "Win32_LogicalProgramGroup": {
+                    "Description": "Instance class Represents a program group in a computer system running Windows.",     
+                    "Requirements": {
+                        "Minimum supported client"  : "Windows Vista",
+                        "Minimum supported server"  : "Windows Server 2008",
+                        "Namespace"                 : "Root\\CIMV2",
+                        "MOF"                       : "CIMWin32.mof",
+                        "DLL"                       : "CIMWin32.dll"
+                    },
+                    "Property Sample": {
+                            "__GENUS"          : 2,
+                            "__CLASS"          : "Win32_LogicalProgramGroup",
+                            "__SUPERCLASS"     : "Win32_ProgramGroupOrItem",
+                            "__DYNASTY"        : "CIM_ManagedSystemElement",
+                            "__RELPATH"        : "Win32_LogicalProgramGroup.Name=\"INTRA\\MURRAYM24:Start Menu\\Programs\\Windows PowerShell\"",
+                            "__PROPERTY_COUNT" : 7,
+                            "__DERIVATION"     : "{Win32_ProgramGroupOrItem, CIM_LogicalElement, CIM_ManagedSystemElement}",
+                            "__SERVER"         : "29LIBR-LAB-T8",
+                            "__NAMESPACE"      : "root\\cimv2",
+                            "__PATH"           : "",
+                            "Caption"          : "Logical program group \"INTRA\\MURRAYM24:Start Menu\\Programs\\Windows PowerShell",
+                            "Description"      : "Logical program group \"INTRA\\MURRAYM24:Start Menu\\Programs\\Windows PowerShell",
+                            "GroupName"        : "Start Menu\\Programs\\Windows PowerShell",
+                            "InstallDate"      : "20251215073934.782194-300",
+                            "Name"             : "INTRA\\MURRAYM24:Start Menu\\Programs\\Windows PowerShell",
+                            "Status"           : null,
+                            "UserName"         : "INTRA\\MURRAYM24",
+                            "PSComputerName"   : "29LIBR-LAB-T8"
+                    },
+                    "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fwindows%2Fwin32%2Fcimwin32prov%2Ftoc.json#page=3277&zoom=100,600,600",
+                    "related": "Win32_ProgramGroupOrItem"
+                },
+
+                "Win32_LogicalProgramGroupDirectory":   ["Association class Relates logical program groups (groupings in the Start menu), and the file directories in which they are stored.", ""],
+                "Win32_LogicalProgramGroupItem":        ["Instance class Represents an element contained by a instance, that is not itself another Win32_ProgramGroup instance.", ""],
+                "Win32_LogicalProgramGroupItemDataFile": ["Association class Relates the program group items of the Start menu, and the files in which they are stored.", ""],
+                "Win32_ProgramGroupContents":           ["Association class Relates a program group order and an individual program group or item contained in it.", ""],
+                "Win32_ProgramGroupOrItem":             ["Instance class Represents a logical grouping of programs on the user's Start|Programs menu.", ""]
+        },
+        "Users (storage) subcategory groups classes": {
+                "summary": "represent storage information",
+                "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fwindows%2Fwin32%2Fcimwin32prov%2Ftoc.json#page=4479",
+                "Win32_ShadowBy":               ["Association class Represents the association between a shadow copy and the provider that creates the shadow copy.", ""],
+                "Win32_ShadowContext":          ["Association class Specifies how a shadow copy is to be created, queried, or deleted.", ""],
+                "Win32_ShadowCopy":             ["Instance class Represents a duplicate copy of the original volume at a previous time.", ""],
+                "Win32_ShadowDiffVolumeSupport": ["Association class Represents an association between a shadow copy provider and a storage volume.", ""],
+                "Win32_ShadowFor":              ["Association class Represents an association between a shadow copy and the volume for which the shadow copy is created.", ""],
+                "Win32_ShadowOn":               ["Association class Represents an association between a shadow copy and where the differential data is written.", ""],
+                "Win32_ShadowProvider":         ["Association class Represents a component that creates and represents volume shadow copies.", ""],
+                "Win32_ShadowStorage":          ["Association class Represents an association between a shadow copy and where the differential data is written.", ""],
+                "Win32_ShadowVolumeSupport":    ["Association class Represents an association between a shadow copy provider with a supported volume.", ""],
+                "Win32_Volume":                 ["Instance class Represents an area of storage on a hard disk.", ""],
+                "Win32_VolumeUserQuota":        ["Association class Represents a volume to the per volume quota settings.", ""]
+        },
+        "Users subcategory groups classes": {
+                "summary": "represent user account information, such as group membership details",
+                "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fwindows%2Fwin32%2Fcimwin32prov%2Ftoc.json#page=4480",
+                "Win32_Account": {
+                    "description": "Instance class Represents information about user accounts and group accounts known to the computer system running Windows.",     
+                    "Requirements": {
+                            "Minimum supported client"      : "Windows Vista",
+                            "Minimum supported server"      : "Windows Server 2008",
+                            "Namespace"                     : "Root\\CIMV2",
+                            "MOF"                           : "CIMWin32.mof",
+                            "DLL"                           : "CIMWin32.dll"
+                    },
+                    "property sample": {
+                            "Caption" : "29LIBR-LAB-T8\\Users",
+                            "Domain"  : "29LIBR-LAB-T8",
+                            "Name"    : "Users",
+                            "SID"     : "S-1-5-32-545"
+                    },
+                    "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fwindows%2Fwin32%2Fcimwin32prov%2Ftoc.json#page=4487&zoom=100,800,800"
+                },
+                "Win32_Group":                  ["Instance class Represents data about a group account.", ""],
+                "Win32_GroupInDomain":          ["Association class Identifies the group accounts associated with a Windows NT domain.", ""],
+                "Win32_GroupUser":              ["Association class Relates a group and an account that is a member of that group.", ""],
+                "Win32_LogonSession": {
+                    "description": "Instance class Describes the logon session or sessions associated with a user logged on to Windows.",
+                    "example": {
+                            "logons": "(get-wmiobject win32_loggedonuser -computername localhost)",
+                            "user-antecedent": "(get-wmiobject win32_loggedonuser -computername localhost).antecedent",
+                            "logonid": "(get-wmiobject win32_loggedonuser -computername localhost).dependent.split(\"=\")[1]",
+                            "session": "(get-wmiobject win32_logonsession |? {(get-wmiobject win32_loggedonuser -computername localhost).dependent.split(\"=\")[1] -match $logonid})",
+                            "Test LogonType": "(if ((get-wmiobject win32_logonsession |? {(get-wmiobject win32_loggedonuser -computername localhost).dependent.split(\"=\")[1] -match $logonid}).logontype -ne 10){Write-host \"You do not have an active Terminal Server session\"})"
+                    },
+                    "Requirements": {
+                        "Minimum supported client"  : "Windows Vista",
+                        "Minimum supported server"  : "Windows Server 2008",
+                        "Namespace"                 : "Root\\CIMV2",
+                        "MOF"                       : "CIMWin32.mof",
+                        "DLL"                       : "CIMWin32.dll"
+                    },
+                    "property sample": {
+                            "AuthenticationPackage" : "CloudAP",
+                            "LogonId"               : 27755281,
+                            "LogonType"             : 2,
+                            "Name"                  : null,
+                            "StartTime"             : "20251215073934.414331-300",
+                            "Status"                : null
+                    },
+                    "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fwindows%2Fwin32%2Fcimwin32prov%2Ftoc.json#page=4893",
+                    "related": "Win32_Session"
+                },
+                "Win32_LogonSessionMappedDisk": ["Instance class Represents the mapped logical disks associated with the session.", ""],
+                "Win32_NetworkLoginProfile":    ["Instance class Represents the network login information of a specific user on a computer system running Windows.", ""],
+                "Win32_SystemAccount":          ["Instance class Represents a system account.", ""],
+                "Win32_UserAccount":            ["Instance class Represents information about a user account on a computer system running Windows.", ""],
+                "Win32_UserInDomain":           ["Association class Relates a user account and a Windows NT domain", ""]
+        },
+        "Windows Event Log subcategory groups classes": {
+                "summary": "represent events, event log entries, event log configuration settings",
+                "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fwindows%2Fwin32%2Fcimwin32prov%2Ftoc.json#page=4481",
+                "Win32_NTEventlogFile":         ["Instance class Represents data stored in a Windows Event log file.", ""],
+                "Win32_NTLogEvent":             ["Instance class Represents Windows events.", ""],
+                "Win32_NTLogEventComputer":     ["Association class Relates instances of Win32_NTLogEvent and Win32_ComputerSystem.", ""],
+                "Win32_NTLogEventLog": {
+                    "description": ["Association class Relates instances of Win32_NTLogEvent and Win32_NTEventlogFile classes.", "https://learn.microsoft.com/en-us/previous-versions/windows/desktop/eventlogprov/win32-ntlogeventlog"],
+                    "Requirements": {
+                        "Minimum supported client"  : "Windows XP",
+                        "Minimum supported server"  : "Windows Server 2003",
+                        "Namespace"                 : "Root\\CIMV2",
+                        "MOF"                       : "Ntevt.mof",
+                        "DLL"                       : "Ntevt.dll"
+                    },
+                    "property sample": {
+                        "__GENUS"          : 2,
+                        "__CLASS"          : "Win32_NTLogEventLog",
+                        "__SUPERCLASS"     : null,
+                        "__DYNASTY"        : "Win32_NTLogEventLog",
+                        "__RELPATH"        : "",
+                        "__PROPERTY_COUNT" : 2,
+                        "__DERIVATION"     : {},
+                        "__SERVER"         : "29LIBR-LAB-T8",
+                        "__NAMESPACE"      : "root\\cimv2",
+                        "__PATH"           : "",
+                        "Log"              : "Win32_NTEventlogFile.Name=\"C:\\WINDOWS\\System32\\Winevt\\Logs\\Application.evtx\"",
+                        "Record"           : "Win32_NTLogEvent.Logfile=\"Application\",RecordNumber=9489",
+                        "PSComputerName"   : "29LIBR-LAB-T8"
+                    }
+                },
+            "Win32_NTLogEventUser": ["Association class Relates instances of Win32_NTLogEvent and Win32_UserAccount.", ""]
+        },
+        "Windows Product Activation (WPA)": {
+            "summary": "an antipiracy technology to reduce the casual copying of software",
+            "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fwindows%2Fwin32%2Fcimwin32prov%2Ftoc.json#page=4482",
+            "Win32_ComputerSystemWindowsProductActivationSetting":  ["Association class Relates instances of Win32_ComputerSystem and Win32_WindowsProductActivation.", ""],
+            "Win32_Proxy":                                          ["Instance class Contains properties and methods to query and configure an Internet connection related to WPA.", ""],
+            "Win32_WindowsProductActivation":                       ["Instance class Contains properties and methods related to WPA.", ""]
+        }
+    },
+    "Win32 Classes": {
+        "link": "https://learn.microsoft.com/en-us/previous-versions//aa394084(v=vs.85)"
+    }
+}

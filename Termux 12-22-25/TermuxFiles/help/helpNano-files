@@ -1,0 +1,49 @@
+Next: Pico Compatibility,  Prev: Feature Toggles,  Up: Top
+8 Nanorc Files
+**************
+Nanorc files can be used to configure ‘nano’ to your liking without
+using command-line options.  
+
+[Configuration File Location]
+During startup ‘nano’ normally reads two
+files: 
+	first the system-wide file
+		/etc/nanorc
+	and then the user-specific file, either
+		~/.nanorc
+		$XDG_CONFIG_HOME/nano/nanorc
+		.config/nano/nanorc8
+whichever exists first.  
+
+[Custom Configuration]
+However,
+	if --rcfile is given, 
+	‘nano’ skips the above files 
+and reads just the specified settings file.
+
+[Configuration File Contents]
+A nanorc file can contain
+	‘set’ and ‘unset’ commands for various options 
+(*note Settings::)
+It can also contain 
+	commands that define syntax highlighting and 
+	commands that rebind keys 
+(*note Syntax Highlighting::)
+(*note Rebinding Keys::)
+
+[Configuration File Syntax]
+Each command should be on a separate line,
+and all commands should be written in lowercase.
+Quotes inside the CHARACTERS parameters below should not be escaped.
+The last double quote on the line will be seen as the closing quote.
+
+[System vs User Configuration File]
+Options that do not take an argument are unset by default.
+So using the 
+	‘unset’ command 
+	is only needed when wanting to override a setting
+	from the system’s nanorc file in your own nanorc.  
+Options that take an argument cannot be unset,
+but can be assigned the empty string.
+
+Any command-line option overrides its nanorc setting, of course.

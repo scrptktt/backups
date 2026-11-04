@@ -1,0 +1,114 @@
+{
+    "Variables": {
+        "Variables.links": {
+            "hints.x+y": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fpowershell%2Fmodule%2Fpsdocs%2Ftoc.json%3Fview%3Dpowershell-7.5#page=30&zoom=100,775,775",
+            "parameters.Action": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fpowershell%2Fmodule%2Fpsdocs%2Ftoc.json%3Fview%3Dpowershell-7.5#page=145&zoom=100,775,775",
+            "about.Automatic_Variables": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fpowershell%2Fmodule%2Fpsdocs%2Ftoc.json%3Fview%3Dpowershell-7.5#page=336&zoom=100,36,36",
+            "about.Assignment.Operators": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fpowershell%2Fmodule%2Fpsdocs%2Ftoc.json%3Fview%3Dpowershell-7.5#page=315&zoom=100,36,36",
+            "about.Environment.Provider": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fpowershell%2Fmodule%2Fpsdocs%2Ftoc.json%3Fview%3Dpowershell-7.5#page=634&zoom=100,36,36",
+            "about.Environment.Variables": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fpowershell%2Fmodule%2Fpsdocs%2Ftoc.json%3Fview%3Dpowershell-7.5#page=639&zoom=100,36,36",
+            "about.Ref": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fpowershell%2Fmodule%2Fpsdocs%2Ftoc.json%3Fview%3Dpowershell-7.5#page=1209&zoom=100,36,36",
+            "about.Variables": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fpowershell%2Fmodule%2Fpsdocs%2Ftoc.json%3Fview%3Dpowershell-7.5#page=1516&zoom=100,36,36"
+        },
+        "Automatic-Variables(av)": {
+            "PowerShell Tokens": {
+                "definitions": "PowerShell Tokens are ",
+                "1": "cmdlet",
+                "2": "value",
+                "3": "parameters"
+            },
+            "av.$^": "The previous prompt-lines first token. (in the session)",
+            "av.$$": "The previous prompt-lines last token. (in the session)",
+            "av.$?": {
+                "summary": "execution status of the last command.",
+                "values": {
+                        "true": "last command succeess",
+                        "false": "last command failure"
+                },
+                "fact": "Parse errors don't result in execution. (no effect on $?)"
+            },
+            "av.$_": {
+                "description": "The pipelines current object. (same as $PSItem)",
+                "use": "pipeline commands where actions occur on every object.",
+                "recommended": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fpowershell%2Fmodule%2Fpsdocs%2Ftoc.json%3Fview%3Dpowershell-7.5#page=1007&zoom=100,37,37"
+            },
+            "av.$args": {
+                "1": "new-event get-event"
+            },
+            "av.$ConsoleFileName": "",
+            "av.$EnabledExperimentalFeatures": "",
+            "av.$Error": "",
+            "av.$Event": "",
+            "av.$EventArgs": "",
+            "av.$EventSubscriber": "",
+            "av.$ExecutionContext": "",
+            "av.$false": "",
+            "av.$foreach": "",
+            "av.$HOME": "",
+            "av.$Host": "",
+            "av.$input": "",
+            "av.$IsCoreCLR": "",
+            "av.$IsLinux": "",
+            "av.$IsMacOS": "",
+            "av.$IsWindows": "",
+            "av.$LASTEXITCODE": "",
+            "av.$Matches": "",
+            "av.$MyInvocation": "",
+            "av.$NestedPromptLevel": "",
+            "av.$null": "",
+            "av.$PID": "",
+            "av.Short description": "",
+            "av.$PROFILE": "",
+            "av.$PSBoundParameters": "",
+            "av.$PSCmdlet": "",
+            "av.$PSCommandPath": "",
+            "av.$PSCulture": "",
+            "av.$PSDebugContext": "",
+            "av.$PSEdition": "",
+            "av.$PSHOME": "",
+            "av.$PSItem": "",
+            "av.$PSScriptRoot": "",
+            "av.$PSSenderInfo": "",
+            "av.$PSUICulture": "",
+            "av.$PSVersionTable": "",
+            "av.$PWD": "",
+            "av.$Sender": "",
+            "av.$ShellId": "",
+            "av.$StackTrace": "",
+            "av.$switch": "",
+            "av.$this": "",
+            "av.$true": "",
+            "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fpowershell%2Fmodule%2Fpsdocs%2Ftoc.json%3Fview%3Dpowershell-7.5#page=336&zoom=100,36,36"
+        }
+    },
+    "New-Event": {
+        "summary": "Get all events",
+        "example.new-event.1": {
+            "description": "uses a Windows.Timer object to send the event (create new event).",
+            "1": "New-Event -SourceIdentifier Timer -Sender Windows.Timer -MessageData \"Test\""
+        },
+        "example.new-event.2": {
+            "description": "Get an event based on the time it was generated",
+            "script": "Enable-ProcessCreationEvent.ps1"
+        },
+        "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fpowershell%2Fmodule%2Fpsdocs%2Ftoc.json%3Fview%3Dpowershell-7.5#page=4516&zoom=100,36,36"
+    },
+    "Get-Event": {
+        "summary": "Get all events",
+        "example.get-event.1": {
+            "description": "Get events by source identifier",
+            "1": "Get-Event -SourceIdentifier \"PowerShell.ProcessCreated\""
+        },
+        "example.get-event.2": {
+            "description": "Get an event based on the time it was generated",
+            "1": "$Events = Get-Event",
+            "2": "$Events[0] | Format-List -Property *",
+            "oneline": "$Events = Get-Event; $Events[0] | Format-List -Property *"
+        },
+        "example.get-event.3": {
+            "description": "Get an event by its identifier",
+            "1": "Get-Event -EventIdentifier 2"
+        },
+        "link": "https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fpowershell%2Fmodule%2Fpsdocs%2Ftoc.json%3Fview%3Dpowershell-7.5#page=4121&zoom=100,36,36"
+    }
+}

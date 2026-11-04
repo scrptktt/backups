@@ -1,0 +1,79 @@
+https://www.google.com/search?q=how+to+use+regular+expressions+in+vscode+search&rlz=1C1GCEA_enUS896US1193&oq=how+to+use+regular+expressions+in+vscode+search&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCTEzMDU1ajBqMagCALACAA&sourceid=chrome&ie=UTF-8
+how to use regular expressions in vscode search
+
+To use regular expressions (regex) in Visual Studio Code's search functions, 
+you need to enable the regex mode by clicking the .* icon in the Find widget or the Search panel. 
+
+In a Single File (Find Widget)
+Open the Find widget: Press Ctrl+F
+Enable Regex Mode: Click the .* icon (Alt+R)
+
+Enter your regex: Type your regular expression into the search box.
+Find matches: 
+VS Code will highlight all occurrences matching your regex within the current file. 
+
+Across All Files (Search Panel)
+Open the Search panel: (Ctrl+Shift+F)
+
+Enable Regex Mode: Click the .* icon
+Enter your regex: Type regular expression.
+View results: results will be grouped by file (in Search panel). 
+(files can be expanded for match previews)
+
+Using Regex for Find and Replace
+Toggle Replace mode: In either the Find widget or Search panel, 
+click the arrow to the left of the search box or press 
+Ctrl+H (Windows/Linux) or Cmd+Option+F (Mac) 
+to open the replace field.
+
+Enable Regex Mode: Ensure the .* icon is selected for both.
+Use Capture Groups: In your Find, wrap parts of the regex in parentheses ()  
+For example: (\w+)\s(\w+) would capture two consecutive words.
+
+In the Replace field, you can reference these groups using $1, $2, and so on, 
+with $0 representing the entire match. 
+
+For example, a replace pattern of $2, $1 for the previous regex would reverse the order 
+of the captured words. 
+
+For more information on the specific , refer to the VS Code documentation. 
+https://learn.microsoft.com/en-us/visualstudio/ide/using-regular-expressions-in-visual-studio?view=visualstudio
+
+_____________________
+https://www.google.com/search?q=vscode+regex+syntax+support&sca_esv=9015ac2879de739b&rlz=1C1GCEA_enUS896US1193&ei=zk1EabKOEeG05NoPwKuduQ0&ved=0ahUKEwiyrePh58eRAxVhGlkFHcBVJ9cQ4dUDCBE&uact=5&oq=vscode+regex+syntax+support&gs_lp=Egxnd3Mtd2l6LXNlcnAiG3ZzY29kZSByZWdleCBzeW50YXggc3VwcG9ydDIGEAAYFhgeMggQABiABBiiBDIFEAAY7wUyCBAAGIAEGKIESLsCUF1YXXABeAGQAQCYAUygAUyqAQExuAEDyAEA-AEBmAICoAJVwgIKEAAYsAMY1gQYR5gDAIgGAZAGCJIHATKgB8ECsgcBMbgHUMIHBTAuMS4xyAcGgAgA&sclient=gws-wiz-serp
+vscode regex syntax support
+
+Visual Studio Code uses a JavaScript (ECMAScript 5) regex flavor by default in the editor's Find widget, 
+while the global Search across files uses the Rust regex engine (ripgrep), 
+with a fallback to PCRE2 for advanced features like backreferences and lookarounds. 
+
+Enabling Regex in VS Code
+You can enable regular expression searching in both the local Find widget (Ctrl/Cmd+F) 
+and the global Search panel (Ctrl/Cmd+Shift+F) by clicking the .* icon in the search bar 
+or by pressing Alt+R (Windows/Linux) or Cmd+Alt+R (Mac). 
+
+Basic Regex Syntax Support
+VS Code supports common regex syntax elements such as 
+. (any character except newline), 
+* (zero or more), 
++ (one or more), 
+? (zero or one), 
+^ (start of line/string), 
+$ (end of line/string), 
+[...] (any character within brackets), 
+[^...] (any character not within brackets), 
+(...|...) (either expression). 
+
+Common shorthand escapes include 
+\b (word boundary), 
+\s (whitespace), 
+\S (non-whitespace), 
+\w (word character), 
+\W (non-word character), 
+\n (newline, with differences in behavior between the editor Find and global Search). 
+
+Capture Groups and Replacement
+Parentheses () can be used for capture groups. In the replacement string, you can reference these groups using $1, $2, etc., with $0 representing the entire match. Named capture groups (?<name>...) in the search pattern can be referenced using ${name} in the replacement pattern when PCRE2 is enabled. 
+Advanced Features (PCRE2)
+To use advanced regex features like lookaheads and backreferences across multiple files, you can enable the search.usePCRE2 setting. 
+For testing your regular expressions, online tools like Regex101 with the ECMAScript flavor selected can be helpful. 
